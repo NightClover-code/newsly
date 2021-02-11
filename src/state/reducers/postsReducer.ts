@@ -25,6 +25,8 @@ const postsReducer = (
       return { loading: false, error: null, data: action.payload };
     case ActionType.FETCH_POSTS_ERROR:
       return { loading: false, error: action.payload, data: null };
+    default:
+      return state;
   }
 };
 export default postsReducer;

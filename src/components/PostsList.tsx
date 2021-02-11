@@ -1,7 +1,6 @@
-import { Component } from 'react';
+import { useEffect } from 'react';
 //posts list component
-export default class PostsList extends Component {
-  render() {
-    return <div>posts list</div>;
-  }
-}
+const PostsList = () => {
+  return <div>PostsList</div>;
+};
+export default PostsList;

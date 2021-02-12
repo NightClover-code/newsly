@@ -1,6 +1,7 @@
-//importing types
+//importing types & lodash
 import { ActionType } from '../action-types';
 import { FetchPostsAction, PostsInterface } from '../actions/fetchPosts';
+import _ from 'lodash';
 //state interface
 interface PostsState {
   loading: boolean;
@@ -22,7 +23,11 @@ const postsReducer = (
     case ActionType.FETCH_POSTS:
       return { loading: true, error: null, data: null };
     case ActionType.FETCH_POSTS_SUCCESS:
-      return { loading: false, error: null, data: action.payload };
+      return {
+        loading: false,
+        error: null,
+        data: _.mapKeys(action.payload, 'id'),
+      };
     case ActionType.FETCH_POSTS_ERROR:
       return { loading: false, error: action.payload, data: null };
     default:

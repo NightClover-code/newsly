@@ -4,7 +4,7 @@ import { ActionType } from '../action-types';
 export type FetchPostsAction = FetchPosts | FetchPostsError | FetchPostsSuccess;
 //data interface
 export interface PostsInterface {
-  id: {
+  [id: number]: {
     id: number;
     title: string;
     categories: string;

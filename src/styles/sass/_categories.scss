@@ -37,8 +37,8 @@
     .categories__grid {
       margin-top: 50px;
       display: grid;
-      grid-template-columns: repeat(5, minmax(180px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(7, minmax(200px, 1fr));
+      gap: 50px;
       .grid__item {
         border: 1px solid rgba(0, 0, 0, 0.1);
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);

@@ -202,9 +202,9 @@ header .container nav .auth__list .list__item:hover {
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(180px, 1fr))[5];
-      grid-template-columns: repeat(5, minmax(180px, 1fr));
-  gap: 40px;
+  -ms-grid-columns: (minmax(200px, 1fr))[7];
+      grid-template-columns: repeat(7, minmax(200px, 1fr));
+  gap: 50px;
 }
 
 .categories__section .categories__grid__container .categories__grid .grid__item {

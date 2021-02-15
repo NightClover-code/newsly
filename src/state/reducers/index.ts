@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
-import postsReducer from './postsReducer';
 //combining reducers
 const reducers = combineReducers({
-  posts: postsReducer,
+  dummy: () => 5,
 });
 export default reducers;
 //ensuring that typescript knows the type of our state

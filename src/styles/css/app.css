@@ -46,9 +46,16 @@ header .container nav .nav__list {
 
 header .container nav .nav__list .list__item {
   list-style: none;
+  cursor: pointer;
   font-weight: 600;
   padding: 0 20px;
   color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .container nav .nav__list .list__item:hover {
+  color: #000;
 }
 
 header .container nav .auth__list {
@@ -65,12 +72,26 @@ header .container nav .auth__list .button {
   color: #fff;
   padding: 15px 25px;
   border-radius: 40px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .container nav .auth__list .button:hover {
+  opacity: 75%;
 }
 
 header .container nav .auth__list .list__item {
+  cursor: pointer;
   padding: 0 30px;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.6);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+header .container nav .auth__list .list__item:hover {
+  color: #000;
 }
 
 * {

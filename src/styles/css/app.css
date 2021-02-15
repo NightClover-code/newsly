@@ -226,6 +226,24 @@ header .container nav .auth__list .list__item:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.categories__section .categories__grid__container .categories__grid .grid__item svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.categories__section .categories__grid__container .categories__grid .grid__item:hover {
+  background-color: rgba(255, 178, 77, 0.15);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.categories__section .categories__grid__container .categories__grid .grid__item:hover svg path {
+  fill: #ffb24d;
 }
 
 .categories__section .categories__grid__container .categories__grid .grid__item .title {

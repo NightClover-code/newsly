@@ -48,6 +48,18 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+        svg path {
+          transition: all 0.2s ease-in-out;
+        }
+        &:hover {
+          background-color: hsla(34, 100%, 65%, 0.15);
+          box-shadow: none;
+        }
+        &:hover svg path {
+          fill: $soft-yellow;
+        }
         .title {
           padding-top: 30px;
           font-size: 20px;

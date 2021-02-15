@@ -1,5 +1,5 @@
 //importing components
-import CategoriesItem from './CategoriesItem';
+import CategoriesGrid from './CategoriesGrid';
 //categories component
 const Categories: React.FC = () => {
   return (
@@ -15,16 +15,7 @@ const Categories: React.FC = () => {
         </div>
       </div>
       <div className="categories__grid__container">
-        <div className="categories__grid">
-          <CategoriesItem imgSource="logo-business" title="Business" />
-          <CategoriesItem
-            imgSource="logo-entertainement"
-            title="Entertainement"
-          />
-          <CategoriesItem imgSource="logo-general" title="General" />
-          <CategoriesItem imgSource="logo-science" title="Science" />
-          <CategoriesItem imgSource="logo-health" title="Health" />
-        </div>
+        <CategoriesGrid />
       </div>
     </section>
   );

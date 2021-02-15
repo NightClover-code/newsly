@@ -193,12 +193,56 @@ header .container nav .auth__list .list__item:hover {
   cursor: pointer;
 }
 
-.categories__section .categories__grid__container {
+.categories__section .categories__grid__section {
+  position: relative;
+}
+
+.categories__section .categories__grid__section .arrow__container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(25%, -10%);
+          transform: translate(25%, -10%);
+  border: 2px solid #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.categories__section .categories__grid__section .arrow__container:hover svg path {
+  fill: #008379;
+}
+
+.categories__section .categories__grid__section .arrow__container .arrow {
+  margin-top: 5px;
+}
+
+.categories__section .categories__grid__section .arrow__container .arrow svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.categories__section .categories__grid__section .categories__grid__container {
   overflow-x: hidden;
   padding: 5px;
 }
 
-.categories__section .categories__grid__container .categories__grid {
+.categories__section .categories__grid__section .categories__grid__container .categories__grid {
   margin-top: 50px;
   display: -ms-grid;
   display: grid;
@@ -207,7 +251,7 @@ header .container nav .auth__list .list__item:hover {
   gap: 50px;
 }
 
-.categories__section .categories__grid__container .categories__grid .grid__item {
+.categories__section .categories__grid__section .categories__grid__container .categories__grid .grid__item {
   border: 1px solid rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
@@ -231,22 +275,22 @@ header .container nav .auth__list .list__item:hover {
   cursor: pointer;
 }
 
-.categories__section .categories__grid__container .categories__grid .grid__item svg path {
+.categories__section .categories__grid__section .categories__grid__container .categories__grid .grid__item svg path {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.categories__section .categories__grid__container .categories__grid .grid__item:hover {
+.categories__section .categories__grid__section .categories__grid__container .categories__grid .grid__item:hover {
   background-color: rgba(255, 178, 77, 0.15);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.categories__section .categories__grid__container .categories__grid .grid__item:hover svg path {
+.categories__section .categories__grid__section .categories__grid__container .categories__grid .grid__item:hover svg path {
   fill: #ffb24d;
 }
 
-.categories__section .categories__grid__container .categories__grid .grid__item .title {
+.categories__section .categories__grid__section .categories__grid__container .categories__grid .grid__item .title {
   padding-top: 30px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.8);

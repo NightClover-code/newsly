@@ -101,7 +101,7 @@ header .container nav .auth__list .list__item:hover {
 }
 
 .hero__section .text__content h1 {
-  font-size: 55px;
+  font-size: 60px;
   font-family: inherit;
   color: #00252b;
   font-weight: 700;
@@ -140,6 +140,111 @@ header .container nav .auth__list .list__item:hover {
   color: #fff;
 }
 
+.categories__section {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 100px;
+  padding-top: 25px;
+}
+
+.categories__section .categories__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.categories__section .categories__head h4 {
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.categories__section .categories__head .search__bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 185px;
+}
+
+.categories__section .categories__head .search__bar .vertical__line {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  height: 30px;
+}
+
+.categories__section .categories__head .search__bar p {
+  color: #008379;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.categories__section .categories__head .search__bar .search__icon__container {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.categories__section .categories__grid__container {
+  overflow-x: hidden;
+  padding: 5px;
+}
+
+.categories__section .categories__grid__container .categories__grid {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[5];
+      grid-template-columns: repeat(5, minmax(180px, 1fr));
+  gap: 40px;
+}
+
+.categories__section .categories__grid__container .categories__grid .grid__item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.categories__section .categories__grid__container .categories__grid .grid__item .title {
+  padding-top: 30px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.articles__section {
+  margin-top: 80px;
+}
+
+.articles__section h1 {
+  font-family: inherit;
+  font-weight: 700;
+  color: #00252b;
+  font-size: 40px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -153,7 +258,7 @@ header .container nav .auth__list .list__item:hover {
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
   background: url("../images/bg-light-green.svg") no-repeat;
-  background-position: 105% 70%;
+  background-position: 105% -130px;
 }
 
 .app__container .wrapper {

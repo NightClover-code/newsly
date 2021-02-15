@@ -3,6 +3,8 @@
 @import './variables';
 @import './hero';
 @import './buttons';
+@import './categories';
+@import './articles';
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
   background: url('../images/bg-light-green.svg') no-repeat;
-  background-position: 105% 70%;
+  background-position: 105% -130px;
   .wrapper {
     min-width: 250px;
     max-width: 2000px;

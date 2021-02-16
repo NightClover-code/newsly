@@ -167,6 +167,12 @@ header .container nav .auth__list .list__item:hover {
   margin-top: 80px;
 }
 
+.secondary__button:hover {
+  color: #fff;
+  background-color: #008379;
+  opacity: 1;
+}
+
 .categories__section {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   margin-top: 100px;

@@ -10,6 +10,15 @@ const Newsletter: React.FC = () => {
             member.
           </p>
         </div>
+        <div className="testimonial__author">
+          <div className="avatar__container">
+            <img src="./images/avatar.jpg" alt="testimonial-avatar" />
+          </div>
+          <div className="author__info">
+            <div className="username">Amir Reda</div>
+            <div className="title">Executive Director at Rustol Company</div>
+          </div>
+        </div>
       </div>
     </section>
   );

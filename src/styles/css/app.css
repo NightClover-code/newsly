@@ -98,7 +98,10 @@ header .container nav .auth__list .list__item:hover {
 
 .hero__section .text__content span {
   color: rgba(0, 0, 0, 0.3);
+<<<<<<< HEAD
   margin-left: 5px;
+=======
+>>>>>>> 73f0b44cb1a0913e66cacda05b6723a29dbe3e71
 }
 
 .hero__section .text__content h1 {

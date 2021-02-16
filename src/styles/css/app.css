@@ -133,7 +133,7 @@ header .container nav .auth__list .list__item:hover {
 }
 
 .button:hover {
-  opacity: 75%;
+  opacity: 0.75;
 }
 
 .primary__button {

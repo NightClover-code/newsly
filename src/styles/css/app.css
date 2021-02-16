@@ -613,7 +613,7 @@ footer .container .footer__top .footer__logo {
 footer .container .footer__top .footer__logo p {
   padding-top: 20px;
   font-size: 18px;
-  opacity: 85%;
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.8;
 }
 

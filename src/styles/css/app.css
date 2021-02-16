@@ -98,10 +98,7 @@ header .container nav .auth__list .list__item:hover {
 
 .hero__section .text__content span {
   color: rgba(0, 0, 0, 0.3);
-<<<<<<< HEAD
   margin-left: 5px;
-=======
->>>>>>> 73f0b44cb1a0913e66cacda05b6723a29dbe3e71
 }
 
 .hero__section .text__content h1 {
@@ -142,6 +139,32 @@ header .container nav .auth__list .list__item:hover {
 .primary__button {
   background-color: #008379;
   color: #fff;
+}
+
+.custom__button {
+  background-color: rgba(255, 178, 77, 0.2);
+  display: inline-block;
+  color: #ffb24d;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.secondary__button {
+  background-color: #fff;
+  color: #008379;
+  border: 2px solid #008379;
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 12px 130px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 80px;
 }
 
 .categories__section {
@@ -302,6 +325,13 @@ header .container nav .auth__list .list__item:hover {
 
 .articles__section {
   margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 .articles__section h1 {
@@ -309,6 +339,93 @@ header .container nav .auth__list .list__item:hover {
   font-weight: 700;
   color: #00252b;
   font-size: 40px;
+}
+
+.articles__section .vertical__line {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.articles__section .articles__grid {
+  margin-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
+      grid-template-columns: 1fr 5px 1fr 5px 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 30px;
+}
+
+.articles__section .articles__grid .articles__item {
+  margin-bottom: 50px;
+}
+
+.articles__section .articles__grid .articles__item .image__container {
+  width: 100%;
+}
+
+.articles__section .articles__grid .articles__item .image__container img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.articles__section .articles__grid .articles__item .text__content {
+  width: 95%;
+}
+
+.articles__section .articles__grid .articles__item .text__content h1 {
+  margin-top: 30px;
+}
+
+.articles__section .articles__grid .articles__item .text__content p {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: normal;
+  font-size: 18px;
+  width: 95%;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+.newsletter__section {
+  background: url("../images/bg-newsletter.png") no-repeat;
+  background-size: cover;
+  margin-top: 160px;
+}
+
+.newsletter__section h1 {
+  font-family: inherit;
+  text-align: center;
+  width: 45%;
+  font-size: 55px;
+  margin: auto;
+}
+
+.newsletter__section .testimonial {
+  margin-top: 80px;
+}
+
+.newsletter__section .testimonial .illustration__container {
+  position: relative;
+  margin: auto;
+  background: url("../images/chat-mockup.png") no-repeat;
+  height: 313px;
+  width: 565px;
+}
+
+.newsletter__section .testimonial .illustration__container p {
+  color: #fff;
+  padding: 40px 55px;
+  line-height: 2;
+  font-size: 30px;
+}
+
+.newsletter__section .testimonial .illustration__container img {
+  position: absolute;
+  left: -100px;
+  top: 0;
 }
 
 * {

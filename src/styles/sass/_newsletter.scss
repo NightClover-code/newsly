@@ -1,0 +1,33 @@
+.newsletter__section {
+  background: url('../images/bg-newsletter.png') no-repeat;
+  background-size: cover;
+  margin-top: 160px;
+  h1 {
+    font-family: inherit;
+    text-align: center;
+    width: 45%;
+    font-size: 55px;
+    margin: auto;
+  }
+  .testimonial {
+    margin-top: 80px;
+    .illustration__container {
+      position: relative;
+      margin: auto;
+      background: url('../images/chat-mockup.png') no-repeat;
+      height: 313px;
+      width: 565px;
+      p {
+        color: #fff;
+        padding: 40px 55px;
+        line-height: 2;
+        font-size: 30px;
+      }
+      img {
+        position: absolute;
+        left: -100px;
+        top: 0;
+      }
+    }
+  }
+}

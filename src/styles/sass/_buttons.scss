@@ -11,3 +11,25 @@
   background-color: $dark-green;
   color: #fff;
 }
+.custom__button {
+  background-color: rgba(255, 178, 77, 0.2);
+  display: inline-block;
+  color: $soft-yellow;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.secondary__button {
+  background-color: #fff;
+  color: $dark-green;
+  border: 2px solid $dark-green;
+  display: inline-block;
+  align-self: center;
+  padding: 12px 130px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 80px;
+}

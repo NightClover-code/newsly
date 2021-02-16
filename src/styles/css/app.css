@@ -345,6 +345,7 @@ header .container nav .auth__list .list__item:hover {
   font-weight: 700;
   color: #00252b;
   font-size: 40px;
+  color: #00252b;
 }
 
 .articles__section .vertical__line {
@@ -407,6 +408,7 @@ header .container nav .auth__list .list__item:hover {
   text-align: center;
   width: 45%;
   font-size: 55px;
+  color: #00252b;
   margin: auto;
 }
 
@@ -475,6 +477,7 @@ header .container nav .auth__list .list__item:hover {
   font-size: 25px;
   font-weight: 600;
   padding-bottom: 10px;
+  color: #00252b;
 }
 
 .newsletter__section .testimonial__author .author__info .title {
@@ -570,6 +573,141 @@ header .container nav .auth__list .list__item:hover {
 
 .newsletter__section form .newsletter__details ul .dot__container img {
   width: 100%;
+}
+
+footer {
+  background-color: #00252b;
+  color: white;
+}
+
+footer .container {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: auto;
+  width: 80%;
+  overflow: hidden;
+}
+
+footer .container .footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .footer__top .footer__logo {
+  width: 280px;
+}
+
+footer .container .footer__top .footer__logo p {
+  padding-top: 20px;
+  font-size: 18px;
+  opacity: 85%;
+  line-height: 1.8;
+}
+
+footer .container .footer__top .footer__lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .container .footer__top .footer__lists ul {
+  padding: 0 40px;
+}
+
+footer .container .footer__top .footer__lists ul .list__head {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: normal;
+  cursor: default;
+}
+
+footer .container .footer__top .footer__lists ul .list__head:hover {
+  text-decoration: none;
+}
+
+footer .container .footer__top .footer__lists ul li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 2.2;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+footer .container .footer__top .footer__lists ul li:hover {
+  text-decoration: underline;
+}
+
+footer .container .footer__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 40px;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 300;
+  margin-top: 80px;
+}
+
+footer .container .footer__bottom .social__media {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 200px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container .footer__bottom .social__media .twitter__icon,
+footer .container .footer__bottom .social__media .linkedin__icon {
+  cursor: pointer;
+}
+
+footer .container .footer__bottom .social__media .twitter__icon svg path,
+footer .container .footer__bottom .social__media .linkedin__icon svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .container .footer__bottom .social__media .twitter__icon:hover svg path,
+footer .container .footer__bottom .social__media .linkedin__icon:hover svg path {
+  fill-opacity: 1;
+  fill: #ffb24d;
+}
+
+footer .container .footer__bottom .social__media .facebook__icon {
+  cursor: pointer;
+}
+
+footer .container .footer__bottom .social__media .facebook__icon svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+footer .container .footer__bottom .social__media .facebook__icon:hover svg .first__path {
+  fill-opacity: 1;
+  fill: #ffb24d;
 }
 
 * {

@@ -1,0 +1,89 @@
+footer {
+  background-color: $very-dark-blue;
+  color: white;
+  .container {
+    padding-top: 80px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+    .footer__top {
+      display: flex;
+      justify-content: space-between;
+      .footer__logo {
+        width: 280px;
+        p {
+          padding-top: 20px;
+          font-size: 18px;
+          opacity: 85%;
+          line-height: 1.8;
+        }
+      }
+      .footer__lists {
+        display: flex;
+        ul {
+          padding: 0 40px;
+          .list__head {
+            color: #fff;
+            font-size: 20px;
+            padding-bottom: 20px;
+            font-weight: normal;
+            cursor: default;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          li {
+            list-style: none;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 2.2;
+            font-weight: 300;
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    .footer__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 40px;
+      color: rgba(255, 255, 255, 0.3);
+      font-weight: 300;
+      margin-top: 80px;
+      .social__media {
+        align-items: center;
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+        .twitter__icon,
+        .linkedin__icon {
+          cursor: pointer;
+          svg path {
+            transition: all 0.2s ease-in-out;
+          }
+          &:hover svg path {
+            fill-opacity: 1;
+            fill: $soft-yellow;
+          }
+        }
+        .facebook__icon {
+          cursor: pointer;
+          svg path {
+            transition: all 0.2s ease-in-out;
+          }
+          &:hover svg .first__path {
+            fill-opacity: 1;
+            fill: $soft-yellow;
+          }
+        }
+      }
+    }
+  }
+}

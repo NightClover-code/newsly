@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Categories from './Categories';
 import Articles from './Articles';
 import Newsletter from './Newsletter';
+import Footer from './Footer';
 //app component
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
         <Articles />
       </div>
       <Newsletter />
+      <Footer />
     </div>
   );
 };

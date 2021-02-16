@@ -10,6 +10,10 @@
     margin: auto;
   }
   .testimonial {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
     margin-top: 80px;
     .illustration__container {
       position: relative;
@@ -27,6 +31,32 @@
         position: absolute;
         left: -100px;
         top: 0;
+      }
+    }
+  }
+  .testimonial__author {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    .avatar__container {
+      width: 100px;
+      height: 100px;
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .author__info {
+      .username {
+        font-size: 25px;
+        font-weight: 600;
+        padding-bottom: 10px;
+      }
+      .title {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 18px;
       }
     }
   }

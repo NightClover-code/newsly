@@ -410,6 +410,19 @@ header .container nav .auth__list .list__item:hover {
 }
 
 .newsletter__section .testimonial {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 80px;
 }
 
@@ -432,6 +445,40 @@ header .container nav .auth__list .list__item:hover {
   position: absolute;
   left: -100px;
   top: 0;
+}
+
+.newsletter__section .testimonial__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.newsletter__section .testimonial__author .avatar__container {
+  width: 100px;
+  height: 100px;
+}
+
+.newsletter__section .testimonial__author .avatar__container img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.newsletter__section .testimonial__author .author__info .username {
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.newsletter__section .testimonial__author .author__info .title {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
 }
 
 * {

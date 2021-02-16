@@ -399,6 +399,7 @@ header .container nav .auth__list .list__item:hover {
   background: url("../images/bg-newsletter.png") no-repeat;
   background-size: cover;
   margin-top: 160px;
+  padding-bottom: 160px;
 }
 
 .newsletter__section h1 {
@@ -479,6 +480,96 @@ header .container nav .auth__list .list__item:hover {
 .newsletter__section .testimonial__author .author__info .title {
   color: rgba(0, 0, 0, 0.6);
   font-size: 18px;
+}
+
+.newsletter__section form {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.newsletter__section form .email__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 70px;
+  width: 500px;
+  height: 70px;
+}
+
+.newsletter__section form .email__container .email__input {
+  border-radius: 70px;
+  outline: none;
+  border: none;
+  padding: 0 50px;
+  font-family: inherit;
+}
+
+.newsletter__section form .email__container .email__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.newsletter__section form .email__container .email__input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.newsletter__section form .email__container .email__input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.newsletter__section form .email__container .email__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.newsletter__section form .email__container .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 15px 35px rgba(0, 131, 121, 0.35);
+          box-shadow: 0 15px 35px rgba(0, 131, 121, 0.35);
+}
+
+.newsletter__section form .newsletter__details {
+  margin-top: 15px;
+}
+
+.newsletter__section form .newsletter__details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.newsletter__section form .newsletter__details ul li {
+  padding: 0 20px;
+  list-style: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 13px;
+}
+
+.newsletter__section form .newsletter__details ul .dot__container {
+  width: 5px;
+  margin-bottom: 5px;
+}
+
+.newsletter__section form .newsletter__details ul .dot__container img {
+  width: 100%;
 }
 
 * {

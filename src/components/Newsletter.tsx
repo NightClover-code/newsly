@@ -19,6 +19,29 @@ const Newsletter: React.FC = () => {
             <div className="title">Executive Director at Rustol Company</div>
           </div>
         </div>
+        <form>
+          <div className="email__container">
+            <input
+              type="email"
+              className="email__input"
+              placeholder="Enter your email..."
+            />
+            <div className="button primary__button">Get Started</div>
+          </div>
+          <div className="newsletter__details">
+            <ul>
+              <li>Easy to use</li>
+              <div className="dot__container">
+                <img src="./images/icon-dot.png" alt="dot-icon" />
+              </div>
+              <li>Free to get Started</li>
+              <div className="dot__container">
+                <img src="./images/icon-dot.png" alt="dot-icon" />
+              </div>
+              <li>Cancel Anytime</li>
+            </ul>
+          </div>
+        </form>
       </div>
     </section>
   );

@@ -1,0 +1,13 @@
+.button {
+  padding: 15px 25px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    opacity: 75%;
+  }
+}
+.primary__button {
+  background-color: $dark-green;
+  color: #fff;
+}

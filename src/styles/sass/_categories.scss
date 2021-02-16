@@ -1,0 +1,102 @@
+.categories__section {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: 100px;
+  padding-top: 25px;
+  .categories__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      font-weight: normal;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .search__bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 185px;
+      .vertical__line {
+        border-left: 1px solid rgba(0, 0, 0, 0.15);
+        height: 30px;
+      }
+      p {
+        color: $dark-green;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .search__icon__container {
+        margin-top: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  .categories__grid__section {
+    position: relative;
+    .arrow__container {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(25%, -10%);
+      border: 2px solid #fff;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      background-color: #fff;
+      &:hover {
+        svg path {
+          fill: $dark-green;
+        }
+      }
+      .arrow {
+        margin-top: 5px;
+        svg path {
+          transition: all 0.2s ease-in-out;
+        }
+      }
+    }
+    .categories__grid__container {
+      overflow-x: hidden;
+      padding: 5px;
+      .categories__grid {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(7, minmax(200px, 1fr));
+        gap: 50px;
+        .grid__item {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+          border-radius: 10px;
+          padding: 30px;
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          svg path {
+            transition: all 0.2s ease-in-out;
+          }
+          &:hover {
+            background-color: hsla(34, 100%, 65%, 0.15);
+            box-shadow: none;
+          }
+          &:hover svg path {
+            fill: $soft-yellow;
+          }
+          .title {
+            padding-top: 30px;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.8);
+          }
+        }
+      }
+    }
+  }
+}

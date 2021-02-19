@@ -23,17 +23,17 @@ const Hero: React.FC = () => {
             d="M31.6729 164.77L79.965 150.027L89.6196 199.588L31.6729 164.77Z"
             fill="white"
             stroke="#008379"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <path
             d="M542.244 64.6632L542.244 5.33868L596.647 63.1942L542.244 64.6632Z"
             stroke="#FFB34D"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <path
             d="M321.393 675.579L268.497 677.008L333.677 634.493L321.393 675.579Z"
             stroke="#ED455D"
-            stroke-width="3"
+            strokeWidth="3"
           />
           <defs>
             <pattern

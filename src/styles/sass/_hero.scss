@@ -2,17 +2,54 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 30px;
+  @media screen and (max-width: 1300px) {
+    margin-top: 50px;
+  }
+  @media screen and (max-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 80px;
+  }
   .text__content {
     width: 500px;
+    @media screen and (max-width: 1000px) {
+      grid-row: 2 / 3;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+    }
     span {
       color: rgba(0, 0, 0, 0.3);
       margin-left: 5px;
+      @media screen and (max-width: 1000px) {
+        font-size: 20px;
+      }
     }
     h1 {
       font-size: 60px;
       font-family: inherit;
       color: $very-dark-blue;
       font-weight: 700;
+      @media screen and (max-width: 1250px) {
+        font-size: 50px;
+        width: 90%;
+      }
+      @media screen and (max-width: 1100px) {
+        font-size: 45px;
+        width: 85%;
+      }
+      @media screen and (max-width: 1000px) {
+        text-align: center;
+        width: 75%;
+        font-size: 60px;
+      }
     }
     .button {
       display: inline-block;
@@ -21,11 +58,28 @@
     }
   }
   .illustration__container {
-    margin-top: 30px;
-    width: 45%;
+    @media screen and (max-width: 1000px) {
+      justify-self: flex-start;
+    }
     svg {
-      width: 100%;
+      width: 550px;
       height: 100%;
+      @media screen and (max-width: 1300px) {
+        width: 500px;
+      }
+      @media screen and (max-width: 1250px) {
+        width: 450px;
+      }
+      @media screen and (max-width: 1100px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      width: 70%;
+      margin: auto;
     }
   }
 }

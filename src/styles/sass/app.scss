@@ -19,6 +19,18 @@
   font-family: 'Nunito', sans-serif;
   background: url('../images/bg-light-green.svg') no-repeat;
   background-position: 105% -130px;
+  @media screen and (max-width: 1300px) {
+    background-position: 130% -150px;
+  }
+  @media screen and (max-width: 1250px) {
+    background-position: 150% -200px;
+  }
+  @media screen and (max-width: 1100px) {
+    background-position: 180% -250px;
+  }
+  @media screen and (max-width: 1000px) {
+    background-position: 150% -180px;
+  }
   .wrapper {
     min-width: 250px;
     max-width: 2000px;

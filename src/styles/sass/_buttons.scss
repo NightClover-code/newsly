@@ -32,6 +32,14 @@
   font-weight: 600;
   font-size: 18px;
   margin-top: 80px;
+  @media screen and (max-width: 800px) {
+    padding: 13px 0;
+    width: 90%;
+    text-align: center;
+  }
+  @media screen and (max-width: 700px) {
+    width: 95%;
+  }
   &:hover {
     color: #fff;
     background-color: $dark-green;

@@ -327,6 +327,20 @@ header .container .menu__icon {
   margin-top: 80px;
 }
 
+@media screen and (max-width: 800px) {
+  .secondary__button {
+    padding: 13px 0;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .secondary__button {
+    width: 95%;
+  }
+}
+
 .secondary__button:hover {
   color: #fff;
   background-color: #008379;

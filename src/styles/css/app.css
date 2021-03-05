@@ -885,6 +885,36 @@ footer .container .footer__bottom .social__media .facebook__icon:hover svg .firs
   }
 }
 
+@media screen and (max-width: 900px) {
+  .app__container {
+    background-position: 250% -180px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .app__container {
+    background-position: 250px -280px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .app__container {
+    background-position: 200px -350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app__container {
+    background-position: 150px -350px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .app__container {
+    background-position: 130px -450px;
+  }
+}
+
 .app__container .wrapper {
   min-width: 250px;
   max-width: 2000px;

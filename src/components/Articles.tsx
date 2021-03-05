@@ -8,18 +8,26 @@ const Articles: React.FC = () => {
       <div className="articles__grid">
         <ArticlesItem />
         <div className="vertical__line"></div>
+        <div className="horizental__line"></div>
         <ArticlesItem />
         <div className="vertical__line"></div>
+        <div className="horizental__line"></div>
         <ArticlesItem />
-        <ArticlesItem />
-        <div className="vertical__line"></div>
-        <ArticlesItem />
-        <div className="vertical__line"></div>
-        <ArticlesItem />
+        <div className="horizental__line"></div>
         <ArticlesItem />
         <div className="vertical__line"></div>
+        <div className="horizental__line"></div>
         <ArticlesItem />
         <div className="vertical__line"></div>
+        <div className="horizental__line"></div>
+        <ArticlesItem />
+        <div className="horizental__line"></div>
+        <ArticlesItem />
+        <div className="vertical__line"></div>
+        <div className="horizental__line"></div>
+        <ArticlesItem />
+        <div className="vertical__line"></div>
+        <div className="horizental__line"></div>
         <ArticlesItem />
       </div>
       <div className="button secondary__button">Show More</div>

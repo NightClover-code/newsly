@@ -1,19 +1,24 @@
+@mixin flexBox {
+  display: flex;
+  align-items: center;
+}
 .categories__section {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   margin-top: 100px;
   padding-top: 25px;
   .categories__head {
-    display: flex;
-    align-items: center;
+    @include flexBox();
     justify-content: space-between;
     h4 {
       font-weight: normal;
       font-size: 20px;
       color: rgba(0, 0, 0, 0.5);
     }
+    @media screen and (max-width: 400px) {
+      flex-flow: column nowrap;
+    }
     .search__bar {
-      display: flex;
-      align-items: center;
+      @include flexBox();
       justify-content: space-between;
       width: 185px;
       .vertical__line {
@@ -37,15 +42,14 @@
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      display: flex;
+      @include flexBox();
       justify-content: center;
-      align-items: center;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
       position: absolute;
       right: 0;
       top: 50%;
-      transform: translate(25%, -10%);
       border: 2px solid #fff;
+      transform: translate(50%, -50%);
       transition: all 0.2s ease-in-out;
       cursor: pointer;
       background-color: #fff;
@@ -62,22 +66,21 @@
       }
     }
     .categories__grid__container {
+      margin-top: 50px;
       overflow-x: hidden;
       padding: 5px;
       .categories__grid {
-        margin-top: 50px;
         display: grid;
-        grid-template-columns: repeat(7, minmax(200px, 1fr));
+        grid-template-columns: repeat(7, minmax(202px, 1fr));
         gap: 50px;
         .grid__item {
           border: 1px solid rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
           border-radius: 10px;
           padding: 30px;
-          display: flex;
-          flex-flow: column nowrap;
+          @include flexBox();
           justify-content: center;
-          align-items: center;
+          flex-flow: column nowrap;
           transition: all 0.2s ease-in-out;
           cursor: pointer;
           svg path {

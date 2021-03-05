@@ -16,6 +16,7 @@
   }
   @media screen and (max-width: 800px) {
     margin-top: 50px;
+    gap: 50px;
   }
   .text__content {
     width: 500px;
@@ -52,6 +53,16 @@
         text-align: center;
         width: 75%;
         font-size: 60px;
+      }
+      @media screen and (max-width: 900px) {
+        font-size: calc(5vh + 10px);
+        width: 100%;
+      }
+      @media screen and (max-width: 700px) {
+        font-size: calc(4vh + 10px);
+      }
+      @media screen and (max-width: 500px) {
+        font-size: calc(3vh + 10px);
       }
     }
     .button {

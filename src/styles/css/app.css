@@ -757,8 +757,8 @@ header .container .menu__icon {
 
 @media screen and (max-width: 700px) {
   .newsletter__section .testimonial .illustration__container {
-    -webkit-transform: scale(0.55);
-            transform: scale(0.55);
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
   }
 }
 
@@ -797,7 +797,7 @@ header .container .menu__icon {
 
 @media screen and (max-width: 700px) {
   .newsletter__section .testimonial .illustration__container img {
-    left: -70px;
+    left: -60px;
   }
 }
 

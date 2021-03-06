@@ -691,7 +691,7 @@ header .container .menu__icon {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 400px) {
   .newsletter__section h1 {
     width: 90%;
   }
@@ -759,6 +759,13 @@ header .container .menu__icon {
   .newsletter__section .testimonial .illustration__container {
     -webkit-transform: scale(0.55);
             transform: scale(0.55);
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .newsletter__section .testimonial .illustration__container {
+    -webkit-transform: scale(0.48);
+            transform: scale(0.48);
   }
 }
 
@@ -873,7 +880,7 @@ header .container .menu__icon {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
   .newsletter__section .testimonial__author .author__info {
     width: 50%;
   }
@@ -948,7 +955,7 @@ header .container .menu__icon {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
   .newsletter__section form .email__container {
     width: 90%;
     height: 60px;
@@ -964,7 +971,7 @@ header .container .menu__icon {
   font-size: 18px;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
   .newsletter__section form .email__container .email__input {
     padding: 0 25px;
     font-size: 16px;
@@ -1005,7 +1012,7 @@ header .container .menu__icon {
   height: 100%;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
   .newsletter__section form .email__container .button {
     padding: 0 20px;
     font-size: 15px;
@@ -1042,7 +1049,7 @@ header .container .menu__icon {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 380px) {
   .newsletter__section form .newsletter__details ul li {
     padding: 0 10px;
     font-size: 11px;

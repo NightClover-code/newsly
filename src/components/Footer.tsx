@@ -13,35 +13,37 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="footer__lists">
-            <ul>
-              <li className="list__head">Help</li>
-              <li>Support</li>
-              <li>KnowledgeBase</li>
-              <li>Tutorials</li>
-            </ul>
-            <ul>
-              <li className="list__head">Features</li>
-              <li>Screen Sharing</li>
-              <li>iOS & Android Apps</li>
-              <li>File Sharing</li>
-              <li>User Management</li>
-              <li>Fundraising</li>
-              <li>Marketing</li>
-              <li>Integration</li>
-            </ul>
-            <ul>
-              <li className="list__head">Company</li>
-              <li>About Us</li>
-              <li>Careers</li>
-              <li>Contact Us</li>
-              <li>Our Customers</li>
-            </ul>
-            <ul>
-              <li className="list__head">Contact Us</li>
-              <li>info@newsly.com</li>
-              <li>1-888-569-423</li>
-              <li>3500 Barkal Street</li>
-            </ul>
+            <div className="left__list">
+              <ul>
+                <li className="list__head">Help</li>
+                <li>Support</li>
+                <li>KnowledgeBase</li>
+                <li>Tutorials</li>
+              </ul>
+              <ul>
+                <li className="list__head">Features</li>
+                <li>Screen Sharing</li>
+                <li>iOS & Android Apps</li>
+                <li>File Sharing</li>
+                <li>User Management</li>
+                <li>Fundraising</li>
+              </ul>
+            </div>
+            <div className="right__list">
+              <ul>
+                <li className="list__head">Company</li>
+                <li>About Us</li>
+                <li>Careers</li>
+                <li>Contact Us</li>
+                <li>Our Customers</li>
+              </ul>
+              <ul>
+                <li className="list__head">Contact Us</li>
+                <li>info@newsly.com</li>
+                <li>1-888-569-423</li>
+                <li>3500 Barkal Street</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className="footer__bottom">

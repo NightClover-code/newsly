@@ -1094,8 +1094,34 @@ footer .container .footer__top {
           justify-content: space-between;
 }
 
+@media screen and (max-width: 1250px) {
+  footer .container .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 60px;
+  }
+}
+
 footer .container .footer__top .footer__logo {
   width: 280px;
+}
+
+@media screen and (max-width: 1250px) {
+  footer .container .footer__top .footer__logo {
+    text-align: center;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  footer .container .footer__top .footer__logo {
+    width: 95%;
+  }
 }
 
 footer .container .footer__top .footer__logo p {
@@ -1109,6 +1135,36 @@ footer .container .footer__top .footer__lists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+footer .container .footer__top .footer__lists .left__list,
+footer .container .footer__top .footer__lists .right__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  footer .container .footer__top .footer__lists .left__list,
+  footer .container .footer__top .footer__lists .right__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  footer .container .footer__top .footer__lists {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    text-align: center;
+    gap: 40px;
+  }
 }
 
 footer .container .footer__top .footer__lists ul {
@@ -1154,6 +1210,16 @@ footer .container .footer__bottom {
   color: rgba(255, 255, 255, 0.3);
   font-weight: 300;
   margin-top: 80px;
+}
+
+@media screen and (max-width: 900px) {
+  footer .container .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    gap: 40px;
+  }
 }
 
 footer .container .footer__bottom .social__media {

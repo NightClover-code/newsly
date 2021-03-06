@@ -3,8 +3,9 @@
   background-size: 100%;
   background-position: 0 100%;
   margin-top: 220px;
-  @media screen and (max-width: 1300px) {
-    // background-position: -100px 0;
+  @media screen and (max-width: 700px) {
+    background-size: cover;
+    background-position: 50% 0;
   }
   h1 {
     font-family: inherit;

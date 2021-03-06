@@ -644,6 +644,13 @@ header .container .menu__icon {
   margin-top: 220px;
 }
 
+@media screen and (max-width: 700px) {
+  .newsletter__section {
+    background-size: cover;
+    background-position: 50% 0;
+  }
+}
+
 .newsletter__section h1 {
   font-family: inherit;
   text-align: center;

@@ -1,10 +1,15 @@
+//importing utils
+import { Link } from 'react-router-dom';
+//header
 const Header: React.FC = () => {
   return (
     <header>
       <div className="container">
-        <div className="logo__container">
-          <img src="./images/logo.svg" alt="logo" />
-        </div>
+        <Link to="/">
+          <div className="logo__container">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+        </Link>
         <nav>
           <div className="nav__list">
             <li className="list__item">Pricing</li>

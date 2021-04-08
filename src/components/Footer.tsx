@@ -1,12 +1,17 @@
+//importing utils
+import { Link } from 'react-router-dom';
+//footer
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
         <div className="footer__top">
           <div className="footer__logo">
-            <div className="logo__container">
-              <img src="./images/logo-footer.svg" alt="footer-logo" />
-            </div>
+            <Link to="/">
+              <div className="logo__container">
+                <img src="./images/logo-footer.svg" alt="footer-logo" />
+              </div>
+            </Link>
             <p>
               The best platform to stay up-to-date with what's going on in the
               world.

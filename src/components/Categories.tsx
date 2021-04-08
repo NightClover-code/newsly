@@ -1,7 +1,15 @@
+//importing hooks
+import { useState } from 'react';
 //importing components
 import CategoriesGrid from './CategoriesGrid';
 //categories component
 const Categories: React.FC = () => {
+  //local state
+  const [counter, setCounter] = useState(0);
+  //on arrow click handler
+  const onArrowRightClickHandler = () => {
+    setCounter(counter + 1);
+  };
   return (
     <section className="categories__section">
       <div className="categories__head">
@@ -15,7 +23,7 @@ const Categories: React.FC = () => {
         </div>
       </div>
       <div className="categories__grid__section">
-        <div className="arrow__container">
+        <div className="arrow__container" onClick={onArrowRightClickHandler}>
           <div className="arrow">
             <svg
               width="24"

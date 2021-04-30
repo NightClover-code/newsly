@@ -19,6 +19,7 @@ footer {
       }
       .footer__logo {
         width: 280px;
+        cursor: pointer;
         @media screen and (max-width: 1250px) {
           text-align: center;
           width: 300px;

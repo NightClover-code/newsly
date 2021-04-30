@@ -1,3 +1,4 @@
+//hero
 const Hero: React.FC = () => {
   return (
     <section className="hero__section">

@@ -1,3 +1,4 @@
+//articles item
 const ArticlesItem: React.FC = () => {
   return (
     <div className="articles__item">

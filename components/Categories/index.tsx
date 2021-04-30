@@ -2,7 +2,7 @@
 import { useState } from 'react';
 //importing components
 import CategoriesGrid from '../CategoriesGrid';
-//categories component
+//categories
 const Categories: React.FC = () => {
   //local state
   const [counter, setCounter] = useState(0);

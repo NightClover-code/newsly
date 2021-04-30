@@ -1,3 +1,4 @@
+//categoris grid
 const CategoriesGrid: React.FC = () => {
   return (
     <div className="categories__grid">

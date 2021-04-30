@@ -1,6 +1,6 @@
 //importing components
 import ArticlesItem from './ArticlesItem';
-//article grid component
+// article grid
 const Articles: React.FC = () => {
   return (
     <section className="articles__section">

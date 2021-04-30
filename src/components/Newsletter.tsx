@@ -1,3 +1,4 @@
+//newsletter
 const Newsletter: React.FC = () => {
   return (
     <section className="newsletter__section">

@@ -7,7 +7,7 @@ import Categories from './Categories';
 import Articles from './Articles';
 import Newsletter from './Newsletter';
 import Footer from './Footer';
-//app component
+//app
 const App: React.FC = () => {
   return (
     <div className="app__container">

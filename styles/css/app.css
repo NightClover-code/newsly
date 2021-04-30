@@ -638,7 +638,7 @@ header .container .menu__icon {
 }
 
 .newsletter__section {
-  background: url("../images/bg-newsletter.png") no-repeat;
+  background: url("../../public/images/bg-newsletter.png") no-repeat;
   background-size: 100%;
   background-position: 0 100%;
   margin-top: 220px;
@@ -728,7 +728,7 @@ header .container .menu__icon {
 
 .newsletter__section .testimonial .illustration__container {
   position: relative;
-  background: url("../images/chat-mockup.png") no-repeat;
+  background: url("../../public/images/chat-mockup.png") no-repeat;
   background-size: contain;
   height: 313px;
   width: 565px;
@@ -1278,7 +1278,7 @@ footer .container .footer__bottom .social__media .facebook__icon:hover svg .firs
   overflow: hidden;
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
-  background: url("../images/bg-light-green.svg") no-repeat;
+  background: url("../../public/images/bg-light-green.svg") no-repeat;
   background-position: 105% -130px;
 }
 

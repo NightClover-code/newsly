@@ -4,9 +4,9 @@ import Footer from '../components/Footer';
 //main layout
 const MainLayout: React.FC = ({ children }) => {
   return (
-    <div className="main__layout">
+    <div className="app__container">
       <Header />
-      <div className="app__container">{children}</div>
+      {children}
       <Footer />
     </div>
   );

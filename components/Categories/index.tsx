@@ -1,7 +1,7 @@
 //importing hooks
 import { useState } from 'react';
 //importing components
-import CategoriesGrid from './CategoriesGrid';
+import CategoriesGrid from '../CategoriesGrid';
 //categories component
 const Categories: React.FC = () => {
   //local state

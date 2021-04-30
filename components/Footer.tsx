@@ -1,5 +1,5 @@
 //importing utils
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 //footer
 const Footer: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="footer__top">
           <div className="footer__logo">
-            <Link to="/">
+            <Link href="/">
               <div className="logo__container">
                 <img src="./images/logo-footer.svg" alt="footer-logo" />
               </div>

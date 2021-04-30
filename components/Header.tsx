@@ -1,11 +1,11 @@
 //importing utils
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 //header
 const Header: React.FC = () => {
   return (
     <header>
       <div className="container">
-        <Link to="/">
+        <Link href="/">
           <div className="logo__container">
             <img src="./images/logo.svg" alt="logo" />
           </div>

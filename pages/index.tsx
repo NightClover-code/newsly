@@ -1,12 +1,19 @@
-import ReactDOM from 'react-dom';
-import App from '../components/App';
-//importing provider & store
-import { Provider } from 'react-redux';
-import { store } from '../state';
-//rendering
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('app')
-);
+//importing components
+import Articles from '../components/Articles';
+import Categories from '../components/Categories';
+import Hero from '../components/Hero';
+import Newsletter from '../components/Newsletter';
+//homepage
+const Homepage: React.FC = () => {
+  return (
+    <>
+      <div className="wrapper">
+        <Hero />
+        <Categories />
+        <Articles />
+      </div>
+      <Newsletter />
+    </>
+  );
+};
+export default Homepage;

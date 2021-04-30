@@ -1,0 +1,39 @@
+.articles__section {
+  margin-top: 80px;
+  display: flex;
+  flex-flow: column nowrap;
+  h1 {
+    font-family: inherit;
+    font-weight: 700;
+    color: $very-dark-blue;
+    font-size: 40px;
+    color: $very-dark-blue;
+  }
+  .vertical__line {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+  .horizental__line {
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    width: 90%;
+    margin: auto;
+    @media screen and (max-width: 800px) {
+      display: block;
+      margin: 10px auto;
+    }
+  }
+  .articles__grid {
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr 5px 1fr 5px 1fr;
+    grid-template-rows: auto;
+    gap: 30px;
+    @media screen and (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+query FetchArticle {
+  article {
+    description
+    author
+    title
+    urlToImage
+    publishedAt
+  }
+}

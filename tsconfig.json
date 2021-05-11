@@ -22,8 +22,7 @@
     "hooks",
     "components",
     "react-app-env.d.ts",
-    "pages/index.tsx",
-    "@types/graphql.d.ts"
+    "pages/index.tsx"
   ],
   "exclude": ["node_modules"]
 }

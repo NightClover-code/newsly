@@ -3,11 +3,6 @@ import { useQuery } from '@apollo/client';
 import ARTICLE_QUERY from '../../graphql/ArticleQuery.graphql';
 //hero
 const Hero: React.FC = () => {
-  //fetching data
-  const { data } = useQuery(ARTICLE_QUERY);
-  if (!data) return null;
-  //destructuring
-  const { title, urlToImage } = data.article;
   return (
     <section className="hero__section">
       <div className="text__content">

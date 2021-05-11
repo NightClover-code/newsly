@@ -1,5 +1,6 @@
 //importing types
 import { Article } from '../interfaces';
+import _ from 'lodash';
 //importing components
 import { GetServerSideProps } from 'next';
 import Articles from '../components/Articles';
@@ -14,12 +15,13 @@ import { client } from './_app';
 import { seoConfigHomepage } from '../utils';
 //props interface
 interface HomePageProps {
+  featuredArticle: Article;
   articles: Article[];
 }
 
 //homepage
-const Homepage: React.FC<HomePageProps> = ({ articles }) => {
-  console.log(articles);
+const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
+  console.log(articles, featuredArticle);
   return (
     <>
       <SEO {...seoConfigHomepage} />
@@ -42,7 +44,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
   });
   return {
     props: {
-      articles,
+      featuredArticle: articles[0],
+      articles: articles.filter((article: Article, index: number) => index > 0),
     },
   };
 };

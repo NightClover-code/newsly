@@ -1,5 +1,11 @@
+//importing types
+import { Article } from '../../interfaces';
+//props interface
+interface HeroProps {
+  featuredArticle: Article;
+}
 //hero
-const Hero: React.FC = () => {
+const Hero: React.FC<HeroProps> = ({ featuredArticle }) => {
   return (
     <section className="hero__section">
       <div className="text__content">

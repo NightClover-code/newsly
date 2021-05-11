@@ -1,7 +1,13 @@
+//importing types
+import { Article } from '../../interfaces';
 //importing components
 import ArticlesItem from './ArticlesItem';
-// article grid
-const Articles: React.FC = () => {
+//props interface
+interface ArticlesProps {
+  articles: Article[];
+}
+//articles grid
+const Articles: React.FC<ArticlesProps> = ({ articles }) => {
   return (
     <section className="articles__section">
       <h1>Articles</h1>

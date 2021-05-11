@@ -1,9 +1,0 @@
-query ArticleQuery {
-  article {
-    description
-    author
-    title
-    urlToImage
-    publishedAt
-  }
-}

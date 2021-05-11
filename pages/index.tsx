@@ -1,4 +1,5 @@
 //importing components
+import { GetServerSideProps } from 'next';
 import Articles from '../components/Articles';
 import Categories from '../components/Categories';
 import Hero from '../components/Hero';
@@ -19,5 +20,14 @@ const Homepage: React.FC = () => {
       <Newsletter />
     </>
   );
+};
+
+//get server side props
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {
+      data: 0,
+    },
+  };
 };
 export default Homepage;

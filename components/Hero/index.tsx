@@ -1,6 +1,3 @@
-//importing hooks & queries
-import { useQuery } from '@apollo/client';
-import ARTICLE_QUERY from '../../graphql/ArticleQuery.graphql';
 //hero
 const Hero: React.FC = () => {
   return (

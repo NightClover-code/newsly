@@ -1,6 +1,5 @@
 //importing types
 import { Article } from '../interfaces';
-import _ from 'lodash';
 //importing components
 import { GetServerSideProps } from 'next';
 import Articles from '../components/Articles';

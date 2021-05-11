@@ -7,7 +7,7 @@ import { AppProps } from 'next/app';
 
 //apollo client init
 export const client = new ApolloClient({
-  uri: process.env.REACT_APP_SERVER_URL,
+  uri: process.env.NEXT_PUBLIC_SERVER_URL,
   cache: new InMemoryCache(),
 });
 

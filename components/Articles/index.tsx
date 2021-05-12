@@ -1,6 +1,8 @@
-//importing types
+//importing types & random id's
 import { Article } from '../../interfaces';
+import { v4 as uuidv4 } from 'uuid';
 //importing components
+import { Fragment } from 'react';
 import ArticlesItem from './ArticlesItem';
 //props interface
 interface ArticlesProps {
@@ -14,16 +16,16 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
       <div className="articles__grid">
         {articles.map((article, index) => {
           return index === 2 || index === 5 ? (
-            <>
+            <Fragment key={uuidv4()}>
               <ArticlesItem article={article} />
               <div className="horizental__line"></div>
-            </>
+            </Fragment>
           ) : (
-            <>
+            <Fragment key={uuidv4()}>
               <ArticlesItem article={article} />
               <div className="vertical__line"></div>
               <div className="horizental__line"></div>
-            </>
+            </Fragment>
           );
         })}
       </div>

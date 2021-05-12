@@ -1,5 +1,7 @@
 //importing hooks
 import { useRef, useEffect, useState } from 'react';
+//importing utils
+import Image from 'next/image';
 //importing types
 import { Article } from '../../../interfaces';
 //props interface

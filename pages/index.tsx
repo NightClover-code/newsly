@@ -20,6 +20,7 @@ interface HomePageProps {
 
 //homepage
 const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
+  console.log(articles);
   return (
     <>
       <SEO {...seoConfigHomepage} />

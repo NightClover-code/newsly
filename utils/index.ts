@@ -1,7 +1,13 @@
-export const seoConfigHomepage = {
-  title: 'Newsly - The Open Source News Website',
-  description:
-    "Newsly is an open source website to read news, articles, and stay up-to-date with what's going on in the world.",
-  keywords:
-    'News API, articles, Website, Web Development, News, Business, Sports, Entertainement, Science',
+//importing types
+import { Article } from '../interfaces';
+
+//function utils
+export const findFeaturedArticle = (articles: Article[]) => {
+  return articles.map(article => {
+    if (article.urlToImage && article.title) {
+      return article;
+    }
+  })[0];
 };
+
+export * from './seo';

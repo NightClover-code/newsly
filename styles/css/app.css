@@ -642,7 +642,7 @@ header .container .menu__icon {
 }
 
 .hero__section .text__content {
-  width: 500px;
+  width: 600px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -681,7 +681,7 @@ header .container .menu__icon {
 }
 
 .hero__section .text__content h1 {
-  font-size: 60px;
+  font-size: 55px;
   font-family: inherit;
   color: #00252b;
   font-weight: 700;

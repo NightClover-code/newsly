@@ -6,11 +6,13 @@ interface HeroProps {
 }
 //hero
 const Hero: React.FC<HeroProps> = ({ featuredArticle }) => {
+  //destructuring
+  const { urlToImage, title } = featuredArticle;
   return (
     <section className="hero__section">
       <div className="text__content">
         <span>Recently Posted</span>
-        <h1>How this Nonprofit Raised $26,000 in 24 hours on Giving Tuesday</h1>
+        <h1>{title}</h1>
         <div className="button primary__button">Read Article</div>
       </div>
       <div className="illustration__container">
@@ -54,12 +56,7 @@ const Hero: React.FC<HeroProps> = ({ featuredArticle }) => {
                 transform="translate(-0.120853) scale(0.00118258 0.00142857)"
               />
             </pattern>
-            <image
-              id="image0"
-              width="1400"
-              height="750"
-              xlinkHref="./images/random.png"
-            />
+            <image id="image0" height="750" xlinkHref={urlToImage!} />
           </defs>
         </svg>
       </div>

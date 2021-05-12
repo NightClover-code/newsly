@@ -1,3 +1,5 @@
+//importing utils
+import Image from 'next/image';
 //newsletter
 const Newsletter: React.FC = () => {
   return (
@@ -5,7 +7,14 @@ const Newsletter: React.FC = () => {
       <h1>Make online news accessible for everyone with our support</h1>
       <div className="testimonial">
         <div className="illustration__container">
-          <img src="./images/icon-quotes.svg" alt="quotes" />
+          <div className="quotes">
+            <Image
+              width="46"
+              height="46"
+              src="/images/icon-quotes.svg"
+              alt="quotes"
+            />
+          </div>
           <p>
             It honestly felt like using newsly expanded our team by another
             member.
@@ -13,7 +22,13 @@ const Newsletter: React.FC = () => {
         </div>
         <div className="testimonial__author">
           <div className="avatar__container">
-            <img src="./images/avatar.jpg" alt="testimonial-avatar" />
+            <Image
+              src="/images/avatar.jpg"
+              alt="testimonial-avatar"
+              width="100"
+              height="100"
+              objectFit="cover"
+            />
           </div>
           <div className="author__info">
             <div className="username">Amir Reda</div>
@@ -33,11 +48,21 @@ const Newsletter: React.FC = () => {
             <ul>
               <li>Easy to use</li>
               <div className="dot__container">
-                <img src="./images/icon-dot.png" alt="dot-icon" />
+                <Image
+                  src="/images/icon-dot.png"
+                  alt="dot-icon"
+                  width="5"
+                  height="5"
+                />
               </div>
               <li>Free to get Started</li>
               <div className="dot__container">
-                <img src="./images/icon-dot.png" alt="dot-icon" />
+                <Image
+                  src="/images/icon-dot.png"
+                  alt="dot-icon"
+                  width="5"
+                  height="5"
+                />
               </div>
               <li>Cancel Anytime</li>
             </ul>

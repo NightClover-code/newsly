@@ -7,7 +7,7 @@ export const findFeaturedArticle = (articles: Article[]) => {
     if (article.urlToImage && article.title) {
       return article;
     }
-  })[0];
+  })[0]!;
 };
 
 export * from './seo';

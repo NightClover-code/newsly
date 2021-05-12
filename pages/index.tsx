@@ -11,7 +11,7 @@ import SEO from '../components/SEO';
 import { articleQuery } from '../graphql/queries';
 import { client } from './_app';
 //importing utils
-import { seoConfigHomepage } from '../utils';
+import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface
 interface HomePageProps {
   featuredArticle: Article;
@@ -36,15 +36,20 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
 
 //get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
+  //fetching articles
   const {
     data: { articles },
   } = await client.query({
     query: articleQuery,
   });
+  //getting featured article
+  const featuredArticle = findFeaturedArticle(articles);
   return {
     props: {
-      featuredArticle: articles[0],
-      articles: articles.filter((article: Article, index: number) => index > 0),
+      featuredArticle,
+      articles: articles.filter(
+        (article: Article) => article !== featuredArticle && article.urlToImage
+      ),
     },
   };
 };

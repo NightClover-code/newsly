@@ -10,12 +10,13 @@ interface ArticlesProps {
 }
 //articles grid
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
+  console.log(articles);
   return (
     <section className="articles__section">
       <h1>Articles</h1>
       <div className="articles__grid">
         {articles.map((article, index) => {
-          return index === 2 || index === 5 ? (
+          return index === 2 || index === 5 || index === 8 ? (
             <Fragment key={uuidv4()}>
               <ArticlesItem article={article} />
               <div className="horizental__line"></div>

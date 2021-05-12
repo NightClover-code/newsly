@@ -29,6 +29,9 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
             </Fragment>
           );
         })}
+        {/* {articles.map(article => {
+          return <ArticlesItem article={article} key={uuidv4()} />;
+        })} */}
       </div>
       <div className="button secondary__button">Show More</div>
     </section>

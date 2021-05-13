@@ -4,8 +4,8 @@ import { articleDetailFragment } from './fragments';
 
 //mutations
 export const updateArticlesMutation = gql`
-  mutation UploadArticlesInput($input: UploadArticlesInput!) {
-    newArticles: uploadArticles(input: $input) {
+  mutation UpdateArticles($articles: [ArticleInput!]!) {
+    newArticles: updateArticles(articles: $articles) {
       ...ArticleDetail
     }
   }

@@ -9,27 +9,17 @@ import Newsletter from '../components/Newsletter';
 import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
-import {
-  updateArticlesMutation,
-  articleQuery,
-  getArticlesInput,
-} from '../graphql';
+import { updateArticlesMutation, articleQuery } from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface
 interface HomePageProps {
   featuredArticle: Article;
   articles: Article[];
-  newArticles: Article[];
 }
 
 //homepage
-const Homepage: React.FC<HomePageProps> = ({
-  articles,
-  featuredArticle,
-  newArticles,
-}) => {
-  console.log(newArticles);
+const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
   return (
     <>
       <SEO {...seoConfigHomepage} />
@@ -51,17 +41,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } = await client.query({
     query: articleQuery,
   });
-  // const {
-  //   data: { newArticles },
-  // } = await client.mutate({
-  //   mutation: updateArticlesMutation,
-  //   variables: {
-  //     input: getArticlesInput(
-  //       'https://cdn.mos.cms.futurecdn.net/FKPFKFC4ictBCPWWCrWnSC-1200-80.jpg',
-  //       articles
-  //     ),
-  //   },
-  // });
   //getting featured article
   const featuredArticle = findFeaturedArticle(articles);
   return {
@@ -70,7 +49,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
       articles: articles.filter(
         (article: Article) => article !== featuredArticle && article.urlToImage
       ),
-      // newArticles,
     },
   };
 };

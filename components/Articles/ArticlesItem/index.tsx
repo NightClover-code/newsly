@@ -26,7 +26,14 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   return (
     <div className="articles__item">
       <div className="image__container">
-        <img src={urlToImage!} alt="random-pic" />
+        <Image
+          src={urlToImage!}
+          alt={title}
+          objectFit="cover"
+          width="200"
+          height="130"
+          layout="responsive"
+        />
       </div>
       <div className="text__content">
         <h1>{title}</h1>

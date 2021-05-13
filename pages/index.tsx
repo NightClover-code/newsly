@@ -47,7 +47,9 @@ export const getServerSideProps: GetServerSideProps = async () => {
     props: {
       featuredArticle,
       articles: articles.filter(
-        (article: Article) => article !== featuredArticle && article.urlToImage
+        (article: Article) =>
+          article !== featuredArticle &&
+          article.urlToImage !== 'Image could not be uploaded'
       ),
     },
   };

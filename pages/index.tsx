@@ -9,7 +9,7 @@ import Newsletter from '../components/Newsletter';
 import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
-import { updateArticlesMutation, articleQuery } from '../graphql';
+import { articleQuery } from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface

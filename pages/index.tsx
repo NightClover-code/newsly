@@ -53,7 +53,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
       articles: updatedArticles.filter(
         (article: Article) =>
           article !== featuredArticle &&
-          article.urlToImage !== 'Image could not be uploaded'
+          article.urlToImage !== 'Image could not be uploaded' &&
+          article.content
       ),
     },
   };

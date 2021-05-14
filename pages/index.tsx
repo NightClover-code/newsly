@@ -9,7 +9,7 @@ import Newsletter from '../components/Newsletter';
 import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
-import { articleQuery } from '../graphql';
+import { articleQuery, getUpdatedArticleMutation } from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface
@@ -35,18 +35,22 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
 
 //get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
-  //fetching articles
-  const {
-    data: { articles },
-  } = await client.query({
+  //saving articles
+  await client.query({
     query: articleQuery,
   });
+  //fetching updated articles
+  const {
+    data: { updatedArticles },
+  } = await client.mutate({
+    mutation: getUpdatedArticleMutation,
+  });
   //getting featured article
-  const featuredArticle = findFeaturedArticle(articles);
+  const featuredArticle = findFeaturedArticle(updatedArticles);
   return {
     props: {
       featuredArticle,
-      articles: articles.filter(
+      articles: updatedArticles.filter(
         (article: Article) =>
           article !== featuredArticle &&
           article.urlToImage !== 'Image could not be uploaded'

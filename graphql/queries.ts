@@ -3,8 +3,8 @@ import { gql } from '@apollo/client';
 import { articleDetailFragment } from './fragments';
 
 //graphql queries
-export const articleQuery = gql`
-  query ArticleQuery {
+export const articlesQuery = gql`
+  query ArticlesQuery {
     articles {
       ...ArticleDetail
     }

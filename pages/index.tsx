@@ -39,14 +39,16 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
 
 //get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
-  // //saving articles
+  //saving articles
   // await client.mutate({
   //   mutation: saveArticlesMutation,
   // });
+
   // //updating articles
   // await client.mutate({
   //   mutation: updateArticlesMutation,
   // });
+
   //fetching articles
   const {
     data: { articles },

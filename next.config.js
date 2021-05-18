@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ['res.cloudinary.com', 'static.foxnews.com', 'washingtonpost.com'],
+    domains: ['res.cloudinary.com', 'static.politico.com'],
   },
 };

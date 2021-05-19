@@ -518,7 +518,7 @@ header .container .logo__container {
 }
 
 header .container .logo__container img {
-  width: 200px;
+  width: 215px;
 }
 
 header .container nav {
@@ -837,7 +837,7 @@ header .container .menu__icon {
 }
 
 .newsletter__section {
-  background: url("../../public/images/bg-newsletter.png") no-repeat;
+  background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465955/bg-newsletter_rxlzxr.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 0%;
   margin-top: 220px;
@@ -927,7 +927,7 @@ header .container .menu__icon {
 
 .newsletter__section .testimonial .illustration__container {
   position: relative;
-  background: url("../../public/images/chat-mockup.png") no-repeat;
+  background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465949/chat-mockup_xny31u.jpg") no-repeat;
   background-size: contain;
   height: 313px;
   width: 565px;
@@ -1270,7 +1270,7 @@ header .container .menu__icon {
   overflow: hidden;
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
-  background: url("../../public/images/bg-light-green.svg") no-repeat;
+  background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465683/bg-light-green_pwxioz.svg") no-repeat;
   background-position: 105% -130px;
 }
 

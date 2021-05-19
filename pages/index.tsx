@@ -41,7 +41,6 @@ export const getServerSideProps: GetServerSideProps = async () => {
     await client.mutate({
       mutation: saveAndUpdateArticlesMutation,
     });
-    console.log('yees');
     setTimeout(callback, hour);
   };
   setTimeout(callback, hour);

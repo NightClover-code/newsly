@@ -28,7 +28,7 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
   //fetching new articles every hour
   useEffect(() => {
     const hour = 3600000;
-    const callback = () => {
+    const callback = async () => {
       saveAndUpdateArticles();
       setTimeout(callback, hour);
     };

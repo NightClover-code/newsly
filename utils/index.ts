@@ -10,5 +10,8 @@ export const findFeaturedArticle = (articles: Article[]) => {
   })[0]!;
 };
 
+export const cloudinaryURLs = {
+  title: '',
+};
 //exporting everything
 export * from './seo';

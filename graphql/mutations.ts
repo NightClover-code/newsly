@@ -2,18 +2,9 @@
 import { gql } from '@apollo/client';
 import { articleDetailFragment } from './fragments';
 
-export const updateArticlesMutation = gql`
+export const saveAndUpdateArticlesMutation = gql`
   mutation {
-    updateArticles {
-      ...ArticleDetail
-    }
-  }
-  ${articleDetailFragment}
-`;
-
-export const saveArticlesMutation = gql`
-  mutation {
-    saveArticles {
+    articles: saveAndUpdateArticles {
       ...ArticleDetail
     }
   }

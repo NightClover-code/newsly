@@ -9,7 +9,7 @@ import Newsletter from '../components/Newsletter';
 import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
-import { saveAndUpdateArticlesMutation } from '../graphql';
+import { articlesQuery, saveAndUpdateArticlesMutation } from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface
@@ -35,11 +35,18 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
 
 //get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
+  const hour = 3600000;
+  //updating articles every hour
+  setTimeout(async () => {
+    await client.mutate({
+      mutation: saveAndUpdateArticlesMutation,
+    });
+  }, hour);
   //fetching articles
   const {
     data: { articles },
-  } = await client.mutate({
-    mutation: saveAndUpdateArticlesMutation,
+  } = await client.query({
+    query: articlesQuery,
   });
   //getting featured article
   const featuredArticle = findFeaturedArticle(articles);

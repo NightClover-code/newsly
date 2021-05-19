@@ -10,7 +10,6 @@ interface ArticlesProps {
 }
 //articles grid
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
-  console.log(articles);
   return (
     <section className="articles__section">
       <h1>Articles</h1>

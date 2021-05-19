@@ -36,12 +36,15 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
 //get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
   const hour = 3600000;
-  //updating articles every hour
-  // setInterval(async () => {
-  //   await client.mutate({
-  //     mutation: saveAndUpdateArticlesMutation,
-  //   });
-  // }, hour);
+  // updating articles every hour
+  const callback = async () => {
+    await client.mutate({
+      mutation: saveAndUpdateArticlesMutation,
+    });
+    console.log('yees');
+    setTimeout(callback, hour);
+  };
+  setTimeout(callback, hour);
   //fetching articles
   const {
     data: { articles },

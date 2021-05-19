@@ -1,4 +1,5 @@
-//importing types
+//importing hooks & types
+import { useEffect } from 'react';
 import { Article } from '../interfaces';
 //importing components
 import { GetServerSideProps } from 'next';
@@ -9,6 +10,7 @@ import Newsletter from '../components/Newsletter';
 import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
+import { useMutation } from '@apollo/client';
 import { articlesQuery, saveAndUpdateArticlesMutation } from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
@@ -20,6 +22,19 @@ interface HomePageProps {
 
 //homepage
 const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
+  //mutation apollo hook
+  const [saveAndUpdateArticles] = useMutation(saveAndUpdateArticlesMutation);
+
+  //fetching new articles every hour
+  useEffect(() => {
+    const hour = 3600000;
+    const callback = () => {
+      saveAndUpdateArticles();
+      setTimeout(callback, hour);
+    };
+    setTimeout(callback, hour);
+  }, []);
+
   return (
     <>
       <SEO {...seoConfigHomepage} />
@@ -35,15 +50,6 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
 
 //get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
-  const hour = 3600000;
-  // updating articles every hour
-  const callback = async () => {
-    await client.mutate({
-      mutation: saveAndUpdateArticlesMutation,
-    });
-    setTimeout(callback, hour);
-  };
-  setTimeout(callback, hour);
   //fetching articles
   const {
     data: { articles },

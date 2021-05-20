@@ -16,23 +16,11 @@ export const articleDetailFragment = gql`
 export const cloudinaryURLsDetailFragment = gql`
   fragment CloudinaryURLsDetail on CloudinaryURLs {
     avatar
-    heroShape
-    heroTriangles
     iconArrow
     iconDot
-    iconFacebook
     logo
-    iconLinkedIn
     iconQuotes
     iconSearch
-    iconTwitter
-    logoBusiness
     logoFooter
-    logoEntertainement
-    logoSports
-    logoHealth
-    logoGeneral
-    logoScience
-    logoTechnology
   }
 `;

@@ -1,6 +1,9 @@
 //importing gql
 import { gql } from '@apollo/client';
-import { articleDetailFragment } from './fragments';
+import {
+  articleDetailFragment,
+  cloudinaryURLsDetailFragment,
+} from './fragments';
 
 //graphql queries
 export const articlesQuery = gql`
@@ -10,4 +13,13 @@ export const articlesQuery = gql`
     }
   }
   ${articleDetailFragment}
+`;
+
+export const cloudinaryURLsQuery = gql`
+  query CloudinaryURLsQuery {
+    cloudinaryURLs {
+      ...CloudinaryURLsDetail
+    }
+  }
+  ${cloudinaryURLsDetailFragment}
 `;

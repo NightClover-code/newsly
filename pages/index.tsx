@@ -1,6 +1,6 @@
 //importing hooks & types
 import { useEffect } from 'react';
-import { Article } from '../interfaces';
+import { Article, CloudinaryURLs } from '../interfaces';
 //importing components
 import { GetServerSideProps } from 'next';
 import Articles from '../components/Articles';
@@ -11,17 +11,26 @@ import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
 import { useMutation } from '@apollo/client';
-import { articlesQuery, saveAndUpdateArticlesMutation } from '../graphql';
+import {
+  articlesQuery,
+  cloudinaryURLsQuery,
+  saveAndUpdateArticlesMutation,
+} from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface
 interface HomePageProps {
   featuredArticle: Article;
   articles: Article[];
+  cloudinaryURLs: CloudinaryURLs[];
 }
 
 //homepage
-const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
+const Homepage: React.FC<HomePageProps> = ({
+  articles,
+  featuredArticle,
+  cloudinaryURLs,
+}) => {
   //mutation apollo hook
   const [saveAndUpdateArticles] = useMutation(saveAndUpdateArticlesMutation);
 
@@ -35,6 +44,10 @@ const Homepage: React.FC<HomePageProps> = ({ articles, featuredArticle }) => {
     setTimeout(callback, hour);
   }, []);
 
+  //configs
+  const heroConfig = {
+    cloudinaryURLs,
+  };
   return (
     <>
       <SEO {...seoConfigHomepage} />
@@ -56,6 +69,12 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } = await client.query({
     query: articlesQuery,
   });
+  //fetching cloudinary urls
+  const {
+    data: { cloudinaryURLs },
+  } = await client.query({
+    query: cloudinaryURLsQuery,
+  });
   //getting featured article
   const featuredArticle = findFeaturedArticle(articles);
   return {
@@ -64,6 +83,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       articles: articles.filter(
         (article: Article) => article !== featuredArticle && article.content
       ),
+      cloudinaryURLs,
     },
   };
 };

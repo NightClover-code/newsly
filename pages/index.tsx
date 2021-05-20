@@ -38,7 +38,7 @@ const Homepage: React.FC<HomePageProps> = ({
   useEffect(() => {
     const hour = 3600000;
     const callback = async () => {
-      saveAndUpdateArticles();
+      await saveAndUpdateArticles();
       setTimeout(callback, hour);
     };
     setTimeout(callback, hour);

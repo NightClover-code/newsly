@@ -1,19 +1,21 @@
-//importing utils
+//importing utils & types
 import Image from 'next/image';
+import { CloudinaryURLs } from '../../interfaces';
+//props interface
+interface NewsletterProps {
+  images: CloudinaryURLs;
+}
 //newsletter
-const Newsletter: React.FC = () => {
+const Newsletter: React.FC<NewsletterProps> = ({
+  images: { iconQuotes, avatar, iconDot },
+}) => {
   return (
     <section className="newsletter__section">
       <h1>Make online news accessible for everyone with our support</h1>
       <div className="testimonial">
         <div className="illustration__container">
           <div className="quotes">
-            <Image
-              width="46"
-              height="46"
-              src="/images/icon-quotes.svg"
-              alt="quotes"
-            />
+            <Image width="46" height="46" src={iconQuotes} alt="quotes" />
           </div>
           <p>
             It honestly felt like using newsly expanded our team by another
@@ -23,7 +25,7 @@ const Newsletter: React.FC = () => {
         <div className="testimonial__author">
           <div className="avatar__container">
             <Image
-              src="/images/avatar.jpg"
+              src={avatar}
               alt="testimonial-avatar"
               width="100"
               height="100"
@@ -48,21 +50,11 @@ const Newsletter: React.FC = () => {
             <ul>
               <li>Easy to use</li>
               <div className="dot__container">
-                <Image
-                  src="/images/icon-dot.png"
-                  alt="dot-icon"
-                  width="5"
-                  height="5"
-                />
+                <Image src={iconDot} alt="dot-icon" width="5" height="5" />
               </div>
               <li>Free to get Started</li>
               <div className="dot__container">
-                <Image
-                  src="/images/icon-dot.png"
-                  alt="dot-icon"
-                  width="5"
-                  height="5"
-                />
+                <Image src={iconDot} alt="dot-icon" width="5" height="5" />
               </div>
               <li>Cancel Anytime</li>
             </ul>

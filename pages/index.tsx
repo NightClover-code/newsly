@@ -22,7 +22,7 @@ import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 interface HomePageProps {
   featuredArticle: Article;
   articles: Article[];
-  cloudinaryURLs: CloudinaryURLs[];
+  cloudinaryURLs: CloudinaryURLs;
 }
 
 //homepage
@@ -44,19 +44,15 @@ const Homepage: React.FC<HomePageProps> = ({
     setTimeout(callback, hour);
   }, []);
 
-  //configs
-  const heroConfig = {
-    cloudinaryURLs,
-  };
   return (
     <>
       <SEO {...seoConfigHomepage} />
       <div className="wrapper">
         <Hero featuredArticle={featuredArticle} />
-        <Categories />
+        <Categories images={cloudinaryURLs} />
         <Articles articles={articles} />
       </div>
-      <Newsletter />
+      <Newsletter images={cloudinaryURLs} />
     </>
   );
 };

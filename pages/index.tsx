@@ -36,12 +36,12 @@ const Homepage: React.FC<HomePageProps> = ({
 
   //fetching new articles every hour
   useEffect(() => {
-    const hour = 3600000;
+    const delay = 30000;
     const callback = async () => {
       await saveAndUpdateArticles();
-      setTimeout(callback, hour);
     };
-    setTimeout(callback, hour);
+
+    setTimeout(callback, delay);
   }, []);
 
   return (

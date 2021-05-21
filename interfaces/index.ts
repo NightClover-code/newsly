@@ -8,7 +8,6 @@ export interface Article {
   publishedAt: string;
   content: string;
 }
-
 export interface CloudinaryURLs {
   avatar: string;
   iconArrow: string;

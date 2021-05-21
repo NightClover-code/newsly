@@ -10,12 +10,7 @@ import Newsletter from '../components/Newsletter';
 import SEO from '../components/SEO';
 //importing apollo & gql queries
 import { client } from './_app';
-import { useMutation } from '@apollo/client';
-import {
-  articlesQuery,
-  cloudinaryURLsQuery,
-  saveAndUpdateArticlesMutation,
-} from '../graphql';
+import { articlesQuery, cloudinaryURLsQuery } from '../graphql';
 //importing utils
 import { seoConfigHomepage, findFeaturedArticle } from '../utils';
 //props interface
@@ -31,19 +26,6 @@ const Homepage: React.FC<HomePageProps> = ({
   featuredArticle,
   cloudinaryURLs,
 }) => {
-  //mutation apollo hook
-  const [saveAndUpdateArticles] = useMutation(saveAndUpdateArticlesMutation);
-
-  //fetching new articles every hour
-  useEffect(() => {
-    const delay = 30000;
-    const callback = async () => {
-      await saveAndUpdateArticles();
-    };
-
-    setTimeout(callback, delay);
-  }, []);
-
   return (
     <>
       <SEO {...seoConfigHomepage} />

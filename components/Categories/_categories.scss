@@ -58,9 +58,8 @@
           fill: $dark-green;
         }
       }
-      .arrow {
-        margin-top: 5px;
-        svg path {
+      svg {
+        path {
           transition: all 0.2s ease-in-out;
         }
       }

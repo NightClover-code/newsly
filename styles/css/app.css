@@ -217,11 +217,7 @@
   fill: #008379;
 }
 
-.categories__section .categories__grid__section .arrow__container .arrow {
-  margin-top: 5px;
-}
-
-.categories__section .categories__grid__section .arrow__container .arrow svg path {
+.categories__section .categories__grid__section .arrow__container svg path {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }

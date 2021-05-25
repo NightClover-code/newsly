@@ -1,11 +1,11 @@
 //importing hooks & types
 import { useState } from 'react';
 import { CloudinaryURLs } from '../../interfaces';
-//imorting utils
-import Image from 'next/image';
 //importing components
 import CategoriesGrid from '../CategoriesGrid';
 import { ArrowIcon } from '../Icons';
+import Image from 'next/image';
+
 //props interface
 interface CategoriesProps {
   images: CloudinaryURLs;

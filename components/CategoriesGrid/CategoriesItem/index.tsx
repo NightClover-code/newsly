@@ -2,6 +2,7 @@
 interface CategoriesItemProps {
   title: string;
 }
+
 //item
 const CategoriesItem: React.FC<CategoriesItemProps> = ({ children, title }) => (
   <div className="grid__item">

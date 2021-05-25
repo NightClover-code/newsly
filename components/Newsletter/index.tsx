@@ -1,10 +1,12 @@
 //importing utils & types
 import Image from 'next/image';
 import { CloudinaryURLs } from '../../interfaces';
+
 //props interface
 interface NewsletterProps {
   images: CloudinaryURLs;
 }
+
 //newsletter
 const Newsletter: React.FC<NewsletterProps> = ({
   images: { iconQuotes, avatar, iconDot },

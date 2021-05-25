@@ -1,5 +1,6 @@
 //importing utils
 import Link from 'next/link';
+
 //footer
 const Footer: React.FC = () => {
   return (

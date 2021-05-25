@@ -1,5 +1,4 @@
 //importing hooks & types
-import { useEffect } from 'react';
 import { Article, CloudinaryURLs } from '../interfaces';
 //importing components
 import { GetServerSideProps } from 'next';

@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 //importing components
 import { Fragment } from 'react';
 import ArticlesItem from './ArticlesItem';
+import { isIndexValid } from '../../utils';
 //props interface
 interface ArticlesProps {
   articles: Article[];
@@ -15,7 +16,7 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
       <h1>Articles</h1>
       <div className="articles__grid">
         {articles.map((article, index) => {
-          return index === 2 || index === 5 || index === 8 ? (
+          return isIndexValid(articles, index) ? (
             <Fragment key={uuidv4()}>
               <ArticlesItem article={article} />
               <div className="horizental__line"></div>
@@ -28,9 +29,6 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
             </Fragment>
           );
         })}
-        {/* {articles.map(article => {
-          return <ArticlesItem article={article} key={uuidv4()} />;
-        })} */}
       </div>
       <div className="button secondary__button">Show More</div>
     </section>

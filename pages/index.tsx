@@ -57,10 +57,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       featuredArticle,
+      cloudinaryURLs,
       articles: articles.filter(
         (article: Article) => article !== featuredArticle && article.content
       ),
-      cloudinaryURLs,
     },
   };
 };

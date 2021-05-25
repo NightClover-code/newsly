@@ -9,6 +9,7 @@ import {
   TechnologyIcon,
 } from '../Icons';
 import CategoriesItem from './CategoriesItem';
+
 //categoris grid
 const CategoriesGrid: React.FC = () => {
   return (

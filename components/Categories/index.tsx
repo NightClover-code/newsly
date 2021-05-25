@@ -10,6 +10,7 @@ import { ArrowIcon } from '../Icons';
 interface CategoriesProps {
   images: CloudinaryURLs;
 }
+
 //categories
 const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   //local state

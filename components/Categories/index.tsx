@@ -21,7 +21,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   return (
     <section className="categories__section">
       <div className="categories__head">
-        <h4>Catgeories</h4>
+        <h4>Categories</h4>
         <div className="search__bar">
           <div className="search__icon__container">
             <Image src={iconSearch} alt="icon-search" width="27" height="27" />

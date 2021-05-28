@@ -16,4 +16,5 @@ export interface CloudinaryURLs {
   iconQuotes: string;
   iconSearch: string;
   logoFooter: string;
+  favicon: string;
 }

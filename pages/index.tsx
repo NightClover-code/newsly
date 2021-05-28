@@ -24,7 +24,7 @@ const Homepage: React.FC<HomePageProps> = props => {
   const { articles, featuredArticle, cloudinaryURLs } = props;
   return (
     <>
-      <SEO {...seoConfigHomepage} />
+      <SEO {...seoConfigHomepage} favicon={cloudinaryURLs.favicon} />
       <div className="wrapper">
         <Hero featuredArticle={featuredArticle} />
         <Categories images={cloudinaryURLs} />

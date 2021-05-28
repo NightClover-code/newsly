@@ -4,7 +4,7 @@ export interface Article {
   author: string | null;
   title: string;
   description: string;
-  urlToImage: string | null;
+  urlToImage: string;
   publishedAt: string;
   content: string;
 }

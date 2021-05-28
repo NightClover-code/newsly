@@ -1,6 +1,7 @@
-//importing utils
+//importing utils & components
 import Link from 'next/link';
 import Image from 'next/image';
+import { MenuIcon } from '../Icons';
 //importing types
 import { CloudinaryURLs } from '../../interfaces';
 
@@ -31,20 +32,7 @@ const Header: React.FC<HeaderProps> = ({ images: { logo } }) => {
             <div className="button primary__button">Get Started</div>
           </div>
         </nav>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="#008379"
-          className="menu__icon"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
+        <MenuIcon />
       </div>
     </header>
   );

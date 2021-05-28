@@ -325,6 +325,9 @@ footer .container .footer__top {
 
 footer .container .footer__top .footer__logo {
   width: 280px;
+}
+
+footer .container .footer__top .footer__logo .logo__container {
   cursor: pointer;
 }
 
@@ -483,6 +486,14 @@ footer .container .footer__bottom .social__media .facebook__icon:hover svg .firs
   fill: #ffb24d;
 }
 
+footer .container .footer__bottom .privacy__policy {
+  cursor: pointer;
+}
+
+footer .container .footer__bottom .privacy__policy:hover {
+  text-decoration: underline;
+}
+
 header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
@@ -574,14 +585,14 @@ header .container nav .auth__list .list__item:hover {
   color: #000;
 }
 
-header .container .menu__icon {
+header .container svg {
   width: 40px;
   cursor: pointer;
   display: none;
 }
 
 @media screen and (max-width: 1050px) {
-  header .container .menu__icon {
+  header .container svg {
     display: block;
   }
 }

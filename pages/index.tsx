@@ -20,11 +20,8 @@ interface HomePageProps {
 }
 
 //homepage
-const Homepage: React.FC<HomePageProps> = ({
-  articles,
-  featuredArticle,
-  cloudinaryURLs,
-}) => {
+const Homepage: React.FC<HomePageProps> = props => {
+  const { articles, featuredArticle, cloudinaryURLs } = props;
   return (
     <>
       <SEO {...seoConfigHomepage} />
@@ -39,7 +36,8 @@ const Homepage: React.FC<HomePageProps> = ({
 };
 
 //get server side props
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async context => {
+  console.log(context);
   //fetching articles
   const {
     data: { articles },
@@ -57,10 +55,10 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       featuredArticle,
-      cloudinaryURLs,
       articles: articles.filter(
         (article: Article) => article !== featuredArticle && article.content
       ),
+      cloudinaryURLs,
     },
   };
 };

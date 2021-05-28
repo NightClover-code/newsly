@@ -4,9 +4,6 @@ import MainLayout from '../layouts/MainLayout';
 //importing gql utils
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
-import { cloudinaryURLsQuery } from '../graphql';
-//importing types
-import { GetServerSideProps } from 'next';
 
 //apollo client init
 export const client = new ApolloClient({
@@ -24,20 +21,5 @@ function MyApp({ Component, pageProps }: AppProps) {
     </ApolloProvider>
   );
 }
-
-//get server side props
-export const getServerSideProps: GetServerSideProps = async () => {
-  //fetching cloudinary urls
-  const {
-    data: { cloudinaryURLs },
-  } = await client.query({
-    query: cloudinaryURLsQuery,
-  });
-  return {
-    props: {
-      cloudinaryURLs,
-    },
-  };
-};
 
 export default MyApp;

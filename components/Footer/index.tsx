@@ -1,5 +1,6 @@
 //importing utils
 import Link from 'next/link';
+import Image from 'next/image';
 
 //footer
 const Footer: React.FC = () => {
@@ -10,7 +11,12 @@ const Footer: React.FC = () => {
           <div className="footer__logo">
             <Link href="/">
               <div className="logo__container">
-                <img src="./images/logo-footer.svg" alt="footer-logo" />
+                <Image
+                  src="/images/logo-footer.svg"
+                  alt="footer-logo"
+                  width="215"
+                  height="56"
+                />
               </div>
             </Link>
             <p>

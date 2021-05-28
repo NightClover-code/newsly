@@ -1,9 +1,16 @@
 //importing utils
 import Link from 'next/link';
 import Image from 'next/image';
+//importing types
+import { CloudinaryURLs } from '../../interfaces';
+
+//props interface
+interface FooterProps {
+  images: CloudinaryURLs;
+}
 
 //footer
-const Footer: React.FC = () => {
+const Footer: React.FC<FooterProps> = ({ images: { logoFooter } }) => {
   return (
     <footer>
       <div className="container">
@@ -12,7 +19,7 @@ const Footer: React.FC = () => {
             <Link href="/">
               <div className="logo__container">
                 <Image
-                  src="/images/logo-footer.svg"
+                  src={logoFooter}
                   alt="footer-logo"
                   width="215"
                   height="56"

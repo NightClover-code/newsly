@@ -13,9 +13,10 @@ export const client = new ApolloClient({
 
 //app component
 function MyApp({ Component, pageProps }: AppProps) {
+  const { cloudinaryURLs } = pageProps;
   return (
     <ApolloProvider client={client}>
-      <MainLayout>
+      <MainLayout images={cloudinaryURLs}>
         <Component {...pageProps} />
       </MainLayout>
     </ApolloProvider>

@@ -1,14 +1,21 @@
 //importing components
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+//importing types
+import { CloudinaryURLs } from '../interfaces';
+
+//props interface
+interface MainLayoutProps {
+  images: CloudinaryURLs;
+}
 
 //main layout
-const MainLayout: React.FC = ({ children }) => {
+const MainLayout: React.FC<MainLayoutProps> = ({ children, images }) => {
   return (
     <div className="app__container">
-      <Header />
+      <Header images={images} />
       {children}
-      <Footer />
+      <Footer images={images} />
     </div>
   );
 };

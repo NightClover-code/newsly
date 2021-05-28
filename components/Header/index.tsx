@@ -1,14 +1,22 @@
 //importing utils
 import Link from 'next/link';
+import Image from 'next/image';
+//importing types
+import { CloudinaryURLs } from '../../interfaces';
+
+//props interface
+interface HeaderProps {
+  images: CloudinaryURLs;
+}
 
 //header
-const Header: React.FC = () => {
+const Header: React.FC<HeaderProps> = ({ images: { logo } }) => {
   return (
     <header>
       <div className="container">
         <Link href="/">
           <div className="logo__container">
-            <img src="./images/logo.svg" alt="logo" />
+            <Image src={logo} alt="logo" layout="fill" />
           </div>
         </Link>
         <nav>

@@ -21,8 +21,8 @@ const Footer: React.FC<FooterProps> = ({ images: { logoFooter } }) => {
                 <Image
                   src={logoFooter}
                   alt="footer-logo"
-                  width="215"
-                  height="56"
+                  width="220"
+                  height="70"
                 />
               </div>
             </Link>

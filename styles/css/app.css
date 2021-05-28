@@ -513,10 +513,6 @@ header .container .logo__container {
   cursor: pointer;
 }
 
-header .container .logo__container img {
-  width: 215px;
-}
-
 header .container nav {
   display: -webkit-box;
   display: -ms-flexbox;

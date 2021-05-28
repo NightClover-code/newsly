@@ -11,13 +11,18 @@ interface HeaderProps {
 }
 
 //header
-const Header: React.FC<HeaderProps> = ({ images: { logo } }) => {
+const Header: React.FC<HeaderProps> = ({ images }) => {
   return (
     <header>
       <div className="container">
         <Link href="/">
           <div className="logo__container">
-            <Image src={logo} alt="logo" width="270" height="70" />
+            <Image
+              src={images ? images.logo : '/images/logo.svg'}
+              alt="logo"
+              width="270"
+              height="70"
+            />
           </div>
         </Link>
         <nav>

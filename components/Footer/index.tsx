@@ -11,7 +11,7 @@ interface FooterProps {
 }
 
 //footer
-const Footer: React.FC<FooterProps> = ({ images: { logoFooter } }) => {
+const Footer: React.FC<FooterProps> = ({ images }) => {
   return (
     <footer>
       <div className="container">
@@ -20,7 +20,7 @@ const Footer: React.FC<FooterProps> = ({ images: { logoFooter } }) => {
             <Link href="/">
               <div className="logo__container">
                 <Image
-                  src={logoFooter}
+                  src={images ? images.logoFooter : '/images/logo-footer.svg'}
                   alt="footer-logo"
                   width="220"
                   height="70"

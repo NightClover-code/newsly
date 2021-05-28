@@ -37,7 +37,6 @@ const Homepage: React.FC<HomePageProps> = props => {
 
 //get server side props
 export const getServerSideProps: GetServerSideProps = async context => {
-  console.log(context);
   //fetching articles
   const {
     data: { articles },

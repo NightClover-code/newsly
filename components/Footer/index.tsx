@@ -1,6 +1,7 @@
 //importing utils
 import Link from 'next/link';
 import Image from 'next/image';
+import { cloudinaryNotFoundURLs } from '../../utils';
 //importing types
 import { CloudinaryURLs } from '../../interfaces';
 import { FacebookIcon, LinkedInIcon, TwitterIcon } from '../Icons';
@@ -20,7 +21,11 @@ const Footer: React.FC<FooterProps> = ({ images }) => {
             <Link href="/">
               <div className="logo__container">
                 <Image
-                  src={images ? images.logoFooter : '/images/logo-footer.svg'}
+                  src={
+                    images
+                      ? images.logoFooter
+                      : cloudinaryNotFoundURLs.logoFooter
+                  }
                   alt="footer-logo"
                   width="220"
                   height="70"

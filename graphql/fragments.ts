@@ -16,7 +16,7 @@ export const articleDetailFragment = gql`
 export const cloudinaryURLsDetailFragment = gql`
   fragment CloudinaryURLsDetail on CloudinaryURLs {
     avatar
-    iconArrow
+    favicon
     iconDot
     logo
     iconQuotes

@@ -11,7 +11,6 @@ export interface Article {
 
 export interface CloudinaryURLs {
   avatar: string;
-  iconArrow: string;
   iconDot: string;
   logo: string;
   iconQuotes: string;

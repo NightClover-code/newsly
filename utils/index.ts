@@ -3,10 +3,10 @@ import { Article } from '../interfaces';
 
 //utils
 export const findFeaturedArticle = (articles: Article[]): Article => {
-  return articles.map(article => {
-    const { urlToImage, title } = article;
-    if (urlToImage && title) return article;
-  })[0]!;
+  return articles.find(article => {
+    const { urlToImage, title, content } = article;
+    if (urlToImage && title && content && title.length < 120) return article;
+  })!;
 };
 
 export const isIndexValid = (
@@ -18,6 +18,11 @@ export const isIndexValid = (
   }
   return null;
 };
+
+export const filterArticles = (featuredArticle: Article, articles: Article[]) =>
+  articles.filter(
+    (article: Article) => article !== featuredArticle && article.content
+  );
 
 export const cloudinaryNotFoundURLs = {
   logoFooter:

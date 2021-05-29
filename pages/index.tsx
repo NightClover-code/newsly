@@ -11,7 +11,11 @@ import SEO from '../components/SEO';
 import { client } from './_app';
 import { articlesQuery, cloudinaryURLsQuery } from '../graphql';
 //importing utils
-import { seoConfigHomepage, findFeaturedArticle } from '../utils';
+import {
+  seoConfigHomepage,
+  findFeaturedArticle,
+  filterArticles,
+} from '../utils';
 //props interface
 interface HomePageProps {
   featuredArticle: Article;
@@ -54,9 +58,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       featuredArticle,
-      articles: articles.filter(
-        (article: Article) => article !== featuredArticle && article.content
-      ),
+      articles: filterArticles(featuredArticle, articles),
       cloudinaryURLs,
     },
   };

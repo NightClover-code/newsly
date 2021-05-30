@@ -21,7 +21,17 @@ export const isIndexValid = (
   index: number
 ): number | null => {
   for (let i = 0; i < articles.length; i++) {
-    if (index === 2 + 3 * i) return index;
+    if (index === 1 + 3 * i) return index;
+  }
+  return null;
+};
+
+export const isResponsiveIndexValid = (
+  articles: Article[],
+  index: number
+): number | null => {
+  for (let i = 0; i < articles.length; i++) {
+    if (index === 1 + 2 * i) return index;
   }
   return null;
 };

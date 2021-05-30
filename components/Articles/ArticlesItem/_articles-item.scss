@@ -1,7 +1,9 @@
 .articles__item {
+  padding: 0 30px;
   margin-bottom: 50px;
   @media screen and (max-width: 800px) {
     margin-bottom: 0px;
+    padding: 0;
   }
   .image__container {
     width: 100%;
@@ -39,5 +41,16 @@
     .news__type {
       margin-top: 15px;
     }
+  }
+}
+
+.item__borders {
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  border-right: 1px solid rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 1300px) {
+    border-right: none;
+  }
+  @media screen and (max-width: 800px) {
+    border: none;
   }
 }

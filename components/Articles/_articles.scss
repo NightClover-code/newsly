@@ -9,6 +9,12 @@
     font-size: 40px;
     color: $very-dark-blue;
   }
+  .vertical__line {
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
   .horizental__line {
     display: none;
     width: 100%;
@@ -23,8 +29,12 @@
   .articles__grid {
     margin-top: 80px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 30px 0;
+    grid-template-columns: 1fr 5px 1fr 5px 1fr;
+    gap: 40px 30px;
+    grid-auto-rows: min-content;
+    @media screen and (max-width: 1300px) {
+      grid-template-columns: 1fr 5px 1fr;
+    }
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr;
     }

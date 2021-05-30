@@ -5,7 +5,14 @@ import { Article } from '../interfaces';
 export const findFeaturedArticle = (articles: Article[]): Article => {
   return articles.find(article => {
     const { urlToImage, title, content } = article;
-    if (urlToImage && title && content && title.length < 120) return article;
+    if (
+      urlToImage &&
+      title &&
+      content &&
+      55 < title.length &&
+      title.length < 100
+    )
+      return article;
   })!;
 };
 

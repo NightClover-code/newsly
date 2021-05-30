@@ -49,7 +49,9 @@
   display: grid;
   -ms-grid-columns: 1fr 5px 1fr 5px 1fr;
       grid-template-columns: 1fr 5px 1fr 5px 1fr;
-  gap: 0 30px;
+  gap: 30px;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
 }
 
 @media screen and (max-width: 800px) {
@@ -118,6 +120,10 @@
   .articles__item .text__content p {
     font-size: 18px;
   }
+}
+
+.articles__item .text__content .news__type {
+  margin-top: 15px;
 }
 
 .categories__section {

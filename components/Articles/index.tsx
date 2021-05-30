@@ -17,6 +17,8 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
+    setWidth(window.innerWidth);
+
     window.addEventListener('resize', () => {
       setWidth(window.innerWidth);
     });

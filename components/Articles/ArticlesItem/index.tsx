@@ -8,7 +8,6 @@ interface ArticlesItemProps {
 }
 //articles item
 const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
-  //destructuring
   const { description, title, urlToImage, author } = article;
   return (
     <div className="articles__item">

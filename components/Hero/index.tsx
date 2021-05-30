@@ -9,7 +9,6 @@ interface HeroProps {
 
 //hero
 const Hero: React.FC<HeroProps> = ({ featuredArticle }) => {
-  //destructuring
   const { urlToImage, title } = featuredArticle;
   return (
     <section className="hero__section">

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 //importing hooks
 import { Fragment, useState, useEffect } from 'react';
 import ArticlesItem from './ArticlesItem';
-import { isIndexValid, isResponsiveIndexValid } from '../../utils';
+import { isIndexValid, isLastIndex, isResponsiveIndexValid } from '../../utils';
 
 //props interface
 interface ArticlesProps {
@@ -42,7 +42,12 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
               </Fragment>
             );
           else
-            return (
+            return isLastIndex(articles, index) ? (
+              <Fragment key={uuidv4()}>
+                <ArticlesItem article={article} />
+                <div className="horizental__line"></div>
+              </Fragment>
+            ) : (
               <Fragment key={uuidv4()}>
                 <ArticlesItem article={article} />
                 <div className="horizental__line"></div>

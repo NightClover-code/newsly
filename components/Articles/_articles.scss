@@ -10,7 +10,7 @@
     color: $very-dark-blue;
   }
   .vertical__line {
-    border-left: 1px solid rgba(0, 0, 0, 0.15);
+    border-left: 1px solid rgba(0, 0, 0, 0.08);
     @media screen and (max-width: 800px) {
       display: none;
     }
@@ -30,7 +30,7 @@
     margin-top: 80px;
     display: grid;
     grid-template-columns: 1fr 5px 1fr 5px 1fr;
-    gap: 40px 30px;
+    gap: 50px 30px;
     grid-auto-rows: min-content;
     @media screen and (max-width: 1300px) {
       grid-template-columns: 1fr 5px 1fr;

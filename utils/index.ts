@@ -26,6 +26,14 @@ export const isIndexValid = (
   return null;
 };
 
+export const isLastIndex = (
+  articles: Article[],
+  index: number
+): number | null => {
+  if (index === articles.length - 1) return index;
+  return null;
+};
+
 export const isResponsiveIndexValid = (
   articles: Article[],
   index: number

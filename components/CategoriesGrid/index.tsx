@@ -10,9 +10,14 @@ import {
 } from '../Icons';
 import CategoriesItem from './CategoriesItem';
 
+//props interface
+interface CategoriesGridInterface {
+  gridRef: React.MutableRefObject<HTMLDivElement | null>;
+}
+
 //categories grid
-const CategoriesGrid: React.FC = () => (
-  <div className="categories__grid">
+const CategoriesGrid: React.FC<CategoriesGridInterface> = ({ gridRef }) => (
+  <div className="categories__grid" ref={gridRef}>
     <CategoriesItem title="Business">
       <BusinessIcon />
     </CategoriesItem>

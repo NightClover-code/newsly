@@ -1,5 +1,5 @@
 //importing hooks & types
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CloudinaryURLs } from '../../interfaces';
 //importing components
 import CategoriesGrid from '../CategoriesGrid';
@@ -13,6 +13,7 @@ interface CategoriesProps {
 
 //categories
 const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
+  const gridRef = useRef<HTMLDivElement | null>(null);
   //local state
   const [counter, setCounter] = useState(0);
 
@@ -20,9 +21,20 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
     setCounter(counter + 1);
   };
 
+  const gap = 50;
+  const distance = 202 + gap;
+
   const onArrowLeftClickHandler = () => {
     setCounter(counter - 1);
   };
+
+  // useEffect(() => {
+  //   if (gridRef.current) {
+  //     gridRef.current.style.transform =
+  //       'translateX(' + -distance * counter + 'px)';
+  //     gridRef.current.style.transition = 'all 0.5s ease-in-out';
+  //   }
+  // }, [counter]);
 
   return (
     <section className="categories__section">
@@ -44,7 +56,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
           <ArrowIconRight />
         </div>
         <div className="categories__grid__container">
-          <CategoriesGrid />
+          <CategoriesGrid gridRef={gridRef} />
         </div>
         <div
           className="arrow__container__left"

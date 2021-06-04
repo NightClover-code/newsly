@@ -260,7 +260,6 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   background-color: #fff;
-  display: none;
 }
 
 .categories__section .categories__grid__section .arrow__container__left:hover svg path {

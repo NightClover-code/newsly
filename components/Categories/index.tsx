@@ -28,13 +28,13 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
     setCounter(counter - 1);
   };
 
-  // useEffect(() => {
-  //   if (gridRef.current) {
-  //     gridRef.current.style.transform =
-  //       'translateX(' + -distance * counter + 'px)';
-  //     gridRef.current.style.transition = 'all 0.5s ease-in-out';
-  //   }
-  // }, [counter]);
+  useEffect(() => {
+    if (gridRef.current) {
+      gridRef.current.style.transform =
+        'translateX(' + -distance * counter + 'px)';
+      gridRef.current.style.transition = 'all 0.5s ease-in-out';
+    }
+  }, [counter]);
 
   return (
     <section className="categories__section">

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { CloudinaryURLs } from '../../interfaces';
 //importing components
 import CategoriesGrid from '../CategoriesGrid';
-import { ArrowIcon } from '../Icons';
+import { ArrowIconLeft, ArrowIconRight } from '../Icons';
 import Image from 'next/image';
 
 //props interface
@@ -15,10 +15,15 @@ interface CategoriesProps {
 const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   //local state
   const [counter, setCounter] = useState(0);
-  //on arrow click handler
+
   const onArrowRightClickHandler = () => {
     setCounter(counter + 1);
   };
+
+  const onArrowLeftClickHandler = () => {
+    setCounter(counter - 1);
+  };
+
   return (
     <section className="categories__section">
       <div className="categories__head">
@@ -32,11 +37,20 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
         </div>
       </div>
       <div className="categories__grid__section">
-        <div className="arrow__container" onClick={onArrowRightClickHandler}>
-          <ArrowIcon />
+        <div
+          className="arrow__container__right"
+          onClick={onArrowRightClickHandler}
+        >
+          <ArrowIconRight />
         </div>
         <div className="categories__grid__container">
           <CategoriesGrid />
+        </div>
+        <div
+          className="arrow__container__left"
+          onClick={onArrowLeftClickHandler}
+        >
+          <ArrowIconLeft />
         </div>
       </div>
     </section>

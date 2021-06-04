@@ -199,7 +199,7 @@
   position: relative;
 }
 
-.categories__section .categories__grid__section .arrow__container {
+.categories__section .categories__grid__section .arrow__container__right {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -226,11 +226,48 @@
   background-color: #fff;
 }
 
-.categories__section .categories__grid__section .arrow__container:hover svg path {
+.categories__section .categories__grid__section .arrow__container__right:hover svg path {
   fill: #008379;
 }
 
-.categories__section .categories__grid__section .arrow__container svg path {
+.categories__section .categories__grid__section .arrow__container__right svg path {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.categories__section .categories__grid__section .arrow__container__left {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 0%;
+  top: 50%;
+  border: 2px solid #fff;
+  -webkit-transform: translate(-43%, -50%);
+          transform: translate(-43%, -50%);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: #fff;
+  display: none;
+}
+
+.categories__section .categories__grid__section .arrow__container__left:hover svg path {
+  fill: #008379;
+}
+
+.categories__section .categories__grid__section .arrow__container__left svg path {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }

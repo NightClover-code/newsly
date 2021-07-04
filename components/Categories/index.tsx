@@ -14,15 +14,15 @@ interface CategoriesProps {
 //categories
 const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
-  //local state
+
   const [counter, setCounter] = useState(0);
+
+  const gap = 50;
+  const distance = 202 + gap;
 
   const onArrowRightClickHandler = () => {
     setCounter(counter + 1);
   };
-
-  const gap = 50;
-  const distance = 202 + gap;
 
   const onArrowLeftClickHandler = () => {
     setCounter(counter - 1);

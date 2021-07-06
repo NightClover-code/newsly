@@ -5,6 +5,8 @@ import { CloudinaryURLs } from '../../interfaces';
 import CategoriesGrid from '../CategoriesGrid';
 import { ArrowIconLeft, ArrowIconRight } from '../Icons';
 import Image from 'next/image';
+//importing utils
+import { handleResponsiveNum } from '../../utils';
 
 //props interface
 interface CategoriesProps {
@@ -32,7 +34,10 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   }, []);
 
   useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
+    const handleResize = () => {
+      setCounter(0);
+      setWidth(window.innerWidth);
+    };
 
     window.addEventListener('resize', handleResize);
 
@@ -40,17 +45,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   }, []);
 
   useEffect(() => {
-    if (width) {
-      if (width > 970) {
-        setResponsiveNum(1);
-      } else if (670 < width && width < 970) {
-        setResponsiveNum(2);
-      } else if (400 < width && width < 670) {
-        setResponsiveNum(3);
-      } else if (width < 400) {
-        setResponsiveNum(4);
-      }
-    }
+    handleResponsiveNum(width, setResponsiveNum);
   }, [width]);
 
   useEffect(() => {

@@ -1,5 +1,6 @@
 //importing types
 import { Article } from '../interfaces';
+import { Dispatch, SetStateAction } from 'react';
 
 //utils
 export const findFeaturedArticle = (articles: Article[]): Article => {
@@ -53,6 +54,18 @@ export const cloudinaryNotFoundURLs = {
   logoFooter:
     'https://res.cloudinary.com/achraf-dev/image/upload/v1621468256/logo-footer_sjeart.svg',
   logo: 'https://res.cloudinary.com/achraf-dev/image/upload/v1621468255/logo_cz2gqx.svg',
+};
+
+export const handleResponsiveNum = (
+  width: number | null,
+  setResponsiveNum: Dispatch<SetStateAction<number>>
+) => {
+  if (width) {
+    if (width > 970) setResponsiveNum(1);
+    else if (670 < width && width < 970) setResponsiveNum(2);
+    else if (400 < width && width < 670) setResponsiveNum(3);
+    else if (width < 400) setResponsiveNum(4);
+  }
 };
 
 //exporting everything

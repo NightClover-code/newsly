@@ -26,7 +26,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   };
 
   const onArrowLeftClickHandler = () => {
-    if (counter >= responsiveNum) setCounter(counter - 1);
+    if (counter > 0 && counter <= responsiveNum) setCounter(counter - 1);
   };
 
   useEffect(() => {
@@ -53,6 +53,8 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
         'px)';
       gridRef.current.style.transition = 'all 0.5s ease-in-out';
     }
+
+    console.log(counter, responsiveNum);
   }, [counter]);
 
   return (

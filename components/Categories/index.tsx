@@ -19,9 +19,6 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const [responsiveNum, setResponsiveNum] = useState(1);
   const [width, setWidth] = useState<number | null>(null);
 
-  const gap = 50;
-  const distance = 202 + gap;
-
   const onArrowRightClickHandler = () => {
     if (counter < responsiveNum) setCounter(counter + 1);
   };
@@ -66,8 +63,6 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
         'px)';
       gridRef.current.style.transition = 'all 0.5s ease-in-out';
     }
-
-    console.log(counter, responsiveNum);
   }, [counter]);
 
   return (
@@ -84,7 +79,9 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
       </div>
       <div className="categories__grid__section">
         <div
-          className="arrow__container__right"
+          className={`arrow__container__right ${
+            counter === responsiveNum ? 'hide__arrow' : ''
+          }`}
           onClick={onArrowRightClickHandler}
         >
           <ArrowIconRight />
@@ -93,7 +90,9 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
           <CategoriesGrid gridRef={gridRef} />
         </div>
         <div
-          className="arrow__container__left"
+          className={`arrow__container__left ${
+            counter === 0 ? 'hide__arrow' : ''
+          }`}
           onClick={onArrowLeftClickHandler}
         >
           <ArrowIconLeft />

@@ -1386,4 +1386,8 @@ header .container svg {
   width: 80%;
   margin: auto;
 }
+
+.hide__arrow {
+  display: none !important;
+}
 /*# sourceMappingURL=app.css.map */

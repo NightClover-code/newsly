@@ -1,9 +1,10 @@
 //importing layout & styles
 import '../styles/css/app.css';
 import MainLayout from '../layouts/MainLayout';
-//importing gql utils
+//importing gql utils & providers
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
+import { WindowProvider } from '../context';
 
 //apollo client init
 export const client = new ApolloClient({
@@ -16,9 +17,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { cloudinaryURLs } = pageProps;
   return (
     <ApolloProvider client={client}>
-      <MainLayout images={cloudinaryURLs}>
-        <Component {...pageProps} />
-      </MainLayout>
+      <WindowProvider>
+        <MainLayout images={cloudinaryURLs}>
+          <Component {...pageProps} />
+        </MainLayout>
+      </WindowProvider>
     </ApolloProvider>
   );
 }

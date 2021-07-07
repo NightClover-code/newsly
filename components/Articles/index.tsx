@@ -50,7 +50,6 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
             return isLastIndex(articles, index) ? (
               <Fragment key={uuidv4()}>
                 <ArticlesItem article={article} />
-                <div className="horizental__line"></div>
               </Fragment>
             ) : (
               <Fragment key={uuidv4()}>

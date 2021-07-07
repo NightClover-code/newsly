@@ -1,5 +1,5 @@
 //importing hooks & types
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useContext } from 'react';
 import { CloudinaryURLs } from '../../interfaces';
 //importing components
 import CategoriesGrid from '../CategoriesGrid';
@@ -7,6 +7,7 @@ import { ArrowIconLeft, ArrowIconRight } from '../Icons';
 import Image from 'next/image';
 //importing utils
 import { handleResponsiveNum } from '../../utils';
+import { WindowContext } from '../../context';
 
 //props interface
 interface CategoriesProps {
@@ -17,9 +18,10 @@ interface CategoriesProps {
 const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
 
+  const { width } = useContext(WindowContext);
+
   const [counter, setCounter] = useState(0);
   const [responsiveNum, setResponsiveNum] = useState(1);
-  const [width, setWidth] = useState<number | null>(null);
 
   const onArrowRightClickHandler = () => {
     if (counter < responsiveNum) setCounter(counter + 1);
@@ -30,11 +32,8 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   };
 
   useEffect(() => {
-    setWidth(window.innerWidth);
-
     const handleResize = () => {
       setCounter(0);
-      setWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);

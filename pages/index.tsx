@@ -1,5 +1,7 @@
 //importing hooks & types
 import { Article, CloudinaryURLs } from '../interfaces';
+import { useContext, useEffect } from 'react';
+import { WindowContext } from '../context';
 //importing components
 import { GetServerSideProps } from 'next';
 import Articles from '../components/Articles';
@@ -15,6 +17,7 @@ import {
   seoConfigHomepage,
   findFeaturedArticle,
   filterArticles,
+  handleWindowResize,
 } from '../utils';
 //props interface
 interface HomePageProps {
@@ -26,6 +29,11 @@ interface HomePageProps {
 //homepage
 const Homepage: React.FC<HomePageProps> = props => {
   const { articles, featuredArticle, cloudinaryURLs } = props;
+
+  const { setWidth } = useContext(WindowContext);
+
+  useEffect(() => handleWindowResize(setWidth), []);
+
   return (
     <>
       <SEO {...seoConfigHomepage} favicon={cloudinaryURLs.favicon} />
@@ -39,7 +47,6 @@ const Homepage: React.FC<HomePageProps> = props => {
   );
 };
 
-//get server side props
 export const getServerSideProps: GetServerSideProps = async () => {
   //fetching articles
   const {
@@ -47,14 +54,17 @@ export const getServerSideProps: GetServerSideProps = async () => {
   } = await client.query({
     query: articlesQuery,
   });
+
   //fetching cloudinary urls
   const {
     data: { cloudinaryURLs },
   } = await client.query({
     query: cloudinaryURLsQuery,
   });
+
   //getting featured article
   const featuredArticle = findFeaturedArticle(articles);
+
   return {
     props: {
       featuredArticle,

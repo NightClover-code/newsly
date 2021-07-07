@@ -1,6 +1,7 @@
 //importing types
 import { Article } from '../interfaces';
 import { Dispatch, SetStateAction } from 'react';
+import { setCounterType, setWidthType } from '../types';
 
 //utils
 export const findFeaturedArticle = (articles: Article[]): Article => {
@@ -66,6 +67,22 @@ export const handleResponsiveNum = (
     else if (400 < width && width < 670) setResponsiveNum(5);
     else if (width < 400) setResponsiveNum(6);
   }
+};
+
+export const handleWindowResize = (
+  setWidth: setWidthType,
+  setCounter?: setCounterType
+) => {
+  setWidth(window.innerWidth);
+
+  const handleResize = () => {
+    if (setCounter) setCounter(0);
+    setWidth(window.innerWidth);
+  };
+
+  window.addEventListener('resize', handleResize);
+
+  return () => window.removeEventListener('resize', handleResize);
 };
 
 //exporting everything

@@ -54,7 +54,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
           responsiveNum) *
           counter +
         'px)';
-      gridRef.current.style.transition = 'all 0.5s ease-in-out';
+      gridRef.current.style.transition = 'all 0.4s ease-in-out';
     }
   }, [counter]);
 

@@ -699,11 +699,6 @@ header .container svg {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2 / 3;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .hero__section .text__content {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -755,6 +750,7 @@ header .container svg {
     text-align: center;
     width: 75%;
     font-size: 60px;
+    margin: 10px;
   }
 }
 
@@ -773,7 +769,7 @@ header .container svg {
 
 @media screen and (max-width: 500px) {
   .hero__section .text__content h1 {
-    font-size: calc(3vh + 10px);
+    font-size: 40px;
   }
 }
 

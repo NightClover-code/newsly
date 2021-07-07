@@ -31,9 +31,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
 
   useEffect(() => {
     setWidth(window.innerWidth);
-  }, []);
 
-  useEffect(() => {
     const handleResize = () => {
       setCounter(0);
       setWidth(window.innerWidth);

@@ -19,9 +19,13 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
   useEffect(() => {
     setWidth(window.innerWidth);
 
-    window.addEventListener('resize', () => {
+    const handleResize = () => {
       setWidth(window.innerWidth);
-    });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (

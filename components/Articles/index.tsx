@@ -13,7 +13,6 @@ interface ArticlesProps {
 
 //articles grid
 const Articles: React.FC<ArticlesProps> = ({ articles }) => {
-  //local state
   const [width, setWidth] = useState(0);
 
   useEffect(() => {

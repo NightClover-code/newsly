@@ -14,7 +14,7 @@
   font-family: inherit;
   font-weight: 700;
   color: #00252b;
-  font-size: 40px;
+  font-size: 45px;
   color: #00252b;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .articles__section .articles__grid {
-  margin-top: 80px;
+  margin-top: 70px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 5px 1fr 5px 1fr;

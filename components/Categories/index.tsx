@@ -6,7 +6,7 @@ import CategoriesGrid from '../CategoriesGrid';
 import { ArrowIconLeft, ArrowIconRight } from '../Icons';
 import Image from 'next/image';
 //importing utils
-import { handleResponsiveNum } from '../../utils';
+import { handleCounterResize, handleResponsiveNum } from '../../utils';
 import { WindowContext } from '../../context';
 
 //props interface
@@ -31,15 +31,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
     if (counter > 0 && counter <= responsiveNum) setCounter(counter - 1);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setCounter(0);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  useEffect(() => handleCounterResize(setCounter), []);
 
   useEffect(() => {
     handleResponsiveNum(width, setResponsiveNum);

@@ -69,15 +69,21 @@ export const handleResponsiveNum = (
   }
 };
 
-export const handleWindowResize = (
-  setWidth: setWidthType,
-  setCounter?: setCounterType
-) => {
+export const handleWindowResize = (setWidth: setWidthType) => {
   setWidth(window.innerWidth);
 
   const handleResize = () => {
-    if (setCounter) setCounter(0);
     setWidth(window.innerWidth);
+  };
+
+  window.addEventListener('resize', handleResize);
+
+  return () => window.removeEventListener('resize', handleResize);
+};
+
+export const handleCounterResize = (setCounter: setCounterType) => {
+  const handleResize = () => {
+    setCounter(0);
   };
 
   window.addEventListener('resize', handleResize);

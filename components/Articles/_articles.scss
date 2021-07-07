@@ -17,7 +17,6 @@
   }
   .horizental__line {
     display: none;
-    width: 100%;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
     width: 90%;
     margin: auto;
@@ -31,12 +30,16 @@
     display: grid;
     grid-template-columns: 1fr 5px 1fr 5px 1fr;
     gap: 50px 30px;
-    grid-auto-rows: min-content;
     @media screen and (max-width: 1300px) {
       grid-template-columns: 1fr 5px 1fr;
     }
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr 5px 1fr;
+      gap: 50px 15px;
+    }
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr;
+      gap: 50px 30px;
     }
   }
 }

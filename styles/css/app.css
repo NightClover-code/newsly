@@ -443,7 +443,7 @@ footer .container .footer__top .footer__lists ul {
 
 footer .container .footer__top .footer__lists ul .list__head {
   color: #fff;
-  font-size: 20px;
+  font-size: 21px;
   padding-bottom: 20px;
   font-weight: normal;
   cursor: default;
@@ -830,7 +830,7 @@ header .container svg {
   background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465955/bg-newsletter_rxlzxr.jpg") no-repeat;
   background-size: cover;
   background-position: 50% 0%;
-  margin-top: 220px;
+  margin-top: 180px;
 }
 
 @media screen and (max-width: 700px) {

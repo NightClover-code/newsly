@@ -21,7 +21,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const { width } = useContext(WindowContext);
 
   const [counter, setCounter] = useState(0);
-  const [responsiveNum, setResponsiveNum] = useState(1);
+  const [responsiveNum, setResponsiveNum] = useState(2);
 
   const onArrowRightClickHandler = () => {
     if (counter < responsiveNum) setCounter(counter + 1);
@@ -33,9 +33,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
 
   useEffect(() => handleCounterResize(setCounter), []);
 
-  useEffect(() => {
-    handleResponsiveNum(width, setResponsiveNum);
-  }, [width]);
+  useEffect(() => handleResponsiveNum(width, setResponsiveNum), [width]);
 
   useEffect(() => {
     if (gridRef.current) {

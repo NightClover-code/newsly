@@ -51,12 +51,6 @@ export const filterArticles = (featuredArticle: Article, articles: Article[]) =>
     (article: Article) => article !== featuredArticle && article.content
   );
 
-export const cloudinaryNotFoundURLs = {
-  logoFooter:
-    'https://res.cloudinary.com/achraf-dev/image/upload/v1621468256/logo-footer_sjeart.svg',
-  logo: 'https://res.cloudinary.com/achraf-dev/image/upload/v1621468255/logo_cz2gqx.svg',
-};
-
 export const handleResponsiveNum = (
   width: number | null,
   setResponsiveNum: Dispatch<SetStateAction<number>>
@@ -93,3 +87,4 @@ export const handleCounterResize = (setCounter: setCounterType) => {
 
 //exporting everything
 export * from './seo';
+export * from './data';

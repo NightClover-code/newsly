@@ -2,13 +2,16 @@
 import Image from 'next/image';
 //importing types
 import { Article } from '../../../interfaces';
+
 //props interface
 interface ArticlesItemProps {
   article: Article;
 }
+
 //articles item
 const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   const { description, title, urlToImage, author } = article;
+
   return (
     <div className="articles__item">
       <div className="image__container">

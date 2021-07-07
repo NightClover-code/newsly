@@ -16,11 +16,13 @@
     }
     @media screen and (max-width: 400px) {
       flex-flow: column nowrap;
+      gap: 10px;
     }
     .search__bar {
       @include flexBox();
       justify-content: space-between;
       width: 185px;
+
       .vertical__line {
         border-left: 1px solid rgba(0, 0, 0, 0.15);
         height: 30px;
@@ -33,6 +35,10 @@
       .search__icon__container {
         margin-top: 5px;
         cursor: pointer;
+      }
+      @media screen and (max-width: 400px) {
+        justify-content: center;
+        gap: 10px;
       }
     }
   }

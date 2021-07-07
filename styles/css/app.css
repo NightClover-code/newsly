@@ -163,6 +163,7 @@
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
+    gap: 10px;
   }
 }
 
@@ -193,6 +194,15 @@
 .categories__section .categories__head .search__bar .search__icon__container {
   margin-top: 5px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+  .categories__section .categories__head .search__bar {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+  }
 }
 
 .categories__section .categories__grid__section {
@@ -836,6 +846,12 @@ header .container svg {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .newsletter__section {
+    margin-top: 100px;
+  }
+}
+
 .newsletter__section h1 {
   font-family: inherit;
   text-align: center;
@@ -907,7 +923,7 @@ header .container svg {
 
 @media screen and (max-width: 700px) {
   .newsletter__section .testimonial {
-    margin-top: 10px;
+    margin-top: 0px;
   }
 }
 
@@ -1006,7 +1022,7 @@ header .container svg {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   .newsletter__section .testimonial__author {
     margin: 0;
   }
@@ -1080,6 +1096,7 @@ header .container svg {
 @media screen and (max-width: 700px) {
   .newsletter__section .testimonial__author .author__info .title {
     font-size: 15px;
+    margin-top: 5px;
   }
 }
 
@@ -1094,7 +1111,7 @@ header .container svg {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 500px) {
   .newsletter__section form {
     padding-top: 50px;
   }

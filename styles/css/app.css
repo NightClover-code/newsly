@@ -224,6 +224,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   background-color: #fff;
+  z-index: 10;
 }
 
 .categories__section .categories__grid__section .arrow__container__right:hover svg path {
@@ -285,10 +286,10 @@
   gap: 50px;
 }
 
-.categories__grid .grid__item {
+.grid__item {
   border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   padding: 30px;
   display: -webkit-box;
@@ -309,22 +310,22 @@
   cursor: pointer;
 }
 
-.categories__grid .grid__item svg path {
+.grid__item svg path {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
-.categories__grid .grid__item:hover {
+.grid__item:hover {
   background-color: rgba(255, 178, 77, 0.15);
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.categories__grid .grid__item:hover svg path {
+.grid__item:hover svg path {
   fill: #ffb24d;
 }
 
-.categories__grid .grid__item .title {
+.grid__item .title {
   padding-top: 30px;
   font-size: 20px;
   color: rgba(0, 0, 0, 0.8);
@@ -825,69 +826,6 @@ header .container svg {
   }
 }
 
-.button {
-  padding: 15px 25px;
-  border-radius: 40px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.button:hover {
-  opacity: 0.75;
-}
-
-.primary__button {
-  background-color: #008379;
-  color: #fff;
-}
-
-.custom__button {
-  background-color: rgba(255, 178, 77, 0.2);
-  display: inline-block;
-  color: #ffb24d;
-  text-transform: uppercase;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.secondary__button {
-  background-color: #fff;
-  color: #008379;
-  border: 2px solid #008379;
-  display: inline-block;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  padding: 12px 130px;
-  font-weight: 600;
-  font-size: 18px;
-  margin-top: 80px;
-}
-
-@media screen and (max-width: 800px) {
-  .secondary__button {
-    padding: 13px 0;
-    width: 90%;
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .secondary__button {
-    width: 95%;
-  }
-}
-
-.secondary__button:hover {
-  color: #fff;
-  background-color: #008379;
-  opacity: 1;
-}
-
 .newsletter__section {
   background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465955/bg-newsletter_rxlzxr.jpg") no-repeat;
   background-size: cover;
@@ -1308,6 +1246,69 @@ header .container svg {
 
 .newsletter__section form .newsletter__details ul .dot__container img {
   width: 100%;
+}
+
+.button {
+  padding: 15px 25px;
+  border-radius: 40px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.primary__button {
+  background-color: #008379;
+  color: #fff;
+}
+
+.custom__button {
+  background-color: rgba(255, 178, 77, 0.2);
+  display: inline-block;
+  color: #ffb24d;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.secondary__button {
+  background-color: #fff;
+  color: #008379;
+  border: 2px solid #008379;
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 12px 130px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 80px;
+}
+
+@media screen and (max-width: 800px) {
+  .secondary__button {
+    padding: 13px 0;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .secondary__button {
+    width: 95%;
+  }
+}
+
+.secondary__button:hover {
+  color: #fff;
+  background-color: #008379;
+  opacity: 1;
 }
 
 * {

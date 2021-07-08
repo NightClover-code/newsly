@@ -13,7 +13,7 @@ export const useResponsiveNum = () => {
           else if (width < 400) setResponsiveNum(6);
         }
       },
-      [responsiveNum]
+      []
     ),
     responsiveNum,
   };

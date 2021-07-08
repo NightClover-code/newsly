@@ -30,8 +30,8 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
     if (counter > 0 && counter <= responsiveNum) setCounter(counter - 1);
   };
 
-  useEffect(() => handleResize(), []);
-  useEffect(() => handleResponsiveNum(width), [width]);
+  useEffect(() => handleResize(), [handleResize]);
+  useEffect(() => handleResponsiveNum(width), [width, handleResponsiveNum]);
 
   useEffect(() => {
     if (gridRef.current) {
@@ -43,7 +43,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
         'px)';
       gridRef.current.style.transition = 'all 0.4s ease-in-out';
     }
-  }, [counter]);
+  }, [counter, responsiveNum]);
 
   return (
     <section className="categories__section">

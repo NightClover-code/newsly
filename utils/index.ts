@@ -51,18 +51,6 @@ export const filterArticles = (featuredArticle: Article, articles: Article[]) =>
     (article: Article) => article !== featuredArticle && article.content
   );
 
-export const handleResponsiveNum = (
-  width: number | null,
-  setResponsiveNum: Dispatch<SetStateAction<number>>
-) => {
-  if (width) {
-    if (width > 970) setResponsiveNum(2);
-    else if (670 < width && width < 970) setResponsiveNum(4);
-    else if (400 < width && width < 670) setResponsiveNum(5);
-    else if (width < 400) setResponsiveNum(6);
-  }
-};
-
 export const handleWindowResize = (setWidth: setWidthType) => {
   setWidth(window.innerWidth);
 
@@ -75,15 +63,7 @@ export const handleWindowResize = (setWidth: setWidthType) => {
   return () => window.removeEventListener('resize', handleResize);
 };
 
-export const handleCounterResize = (setCounter: setCounterType) => {
-  const handleResize = () => {
-    setCounter(0);
-  };
-
-  window.addEventListener('resize', handleResize);
-
-  return () => window.removeEventListener('resize', handleResize);
-};
+export const handleCounterResize = (setCounter: setCounterType) => {};
 
 //exporting everything
 export * from './seo';

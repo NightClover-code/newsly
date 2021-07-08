@@ -1,12 +1,12 @@
 //importing hooks & types
-import { useState, useEffect, useRef, useContext } from 'react';
+import { useEffect, useRef, useContext } from 'react';
 import { CloudinaryURLs } from '../../interfaces';
+import { useCounter, useResponsiveNum } from '../../hooks';
 //importing components
 import CategoriesGrid from '../CategoriesGrid';
 import { ArrowIconLeft, ArrowIconRight } from '../Icons';
 import Image from 'next/image';
-//importing utils
-import { handleCounterResize, handleResponsiveNum } from '../../utils';
+//importing context
 import { WindowContext } from '../../context';
 
 //props interface
@@ -19,9 +19,8 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
 
   const { width } = useContext(WindowContext);
-
-  const [counter, setCounter] = useState(0);
-  const [responsiveNum, setResponsiveNum] = useState(2);
+  const { handleResponsiveNum, responsiveNum } = useResponsiveNum();
+  const { handleResize, counter, setCounter } = useCounter();
 
   const onArrowRightClickHandler = () => {
     if (counter < responsiveNum) setCounter(counter + 1);
@@ -31,9 +30,8 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
     if (counter > 0 && counter <= responsiveNum) setCounter(counter - 1);
   };
 
-  useEffect(() => handleCounterResize(setCounter), []);
-
-  useEffect(() => handleResponsiveNum(width, setResponsiveNum), [width]);
+  useEffect(() => handleResize(), []);
+  useEffect(() => handleResponsiveNum(width), [width]);
 
   useEffect(() => {
     if (gridRef.current) {

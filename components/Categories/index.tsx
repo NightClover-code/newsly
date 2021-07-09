@@ -6,8 +6,6 @@ import { useCounter, useResponsiveNum } from '../../hooks';
 import CategoriesGrid from '../CategoriesGrid';
 import { ArrowIconLeft, ArrowIconRight } from '../Icons';
 import Image from 'next/image';
-//importing context
-import { WindowContext } from '../../context';
 
 //props interface
 interface CategoriesProps {
@@ -18,7 +16,6 @@ interface CategoriesProps {
 const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
 
-  const { width } = useContext(WindowContext);
   const { handleResponsiveNum, responsiveNum } = useResponsiveNum();
   const { handleResize, counter, setCounter } = useCounter();
 

@@ -1,13 +1,23 @@
-// export const useWindowResize = () => {
-//       setWidth(window.innerWidth);
+import { WindowContext } from '../context';
+import { useContext, useMemo } from 'react';
 
-//       const handleResize = () => {
-//         setWidth(window.innerWidth);
-//       };
+export const useWindowResize = () => {
+  const { setWidth } = useContext(WindowContext);
 
-//       window.addEventListener('resize', handleResize);
+  return {
+    handleWindowResize: useMemo(
+      () => () => {
+        setWidth(window.innerWidth);
 
-//       return () => window.removeEventListener('resize', handleResize);
-// }
+        const handleResize = () => {
+          setWidth(window.innerWidth);
+        };
 
-export {};
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+      },
+      [setWidth]
+    ),
+  };
+};

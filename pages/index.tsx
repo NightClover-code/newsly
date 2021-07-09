@@ -1,7 +1,5 @@
 //importing hooks & types
 import { Article, CloudinaryURLs } from '../interfaces';
-import { useContext, useEffect } from 'react';
-import { WindowContext } from '../context';
 //importing components
 import { GetServerSideProps } from 'next';
 import Articles from '../components/Articles';
@@ -17,8 +15,9 @@ import {
   seoConfigHomepage,
   findFeaturedArticle,
   filterArticles,
-  handleWindowResize,
 } from '../utils';
+import { useWindowResize } from '../hooks';
+import { useEffect } from 'react';
 //props interface
 interface HomePageProps {
   featuredArticle: Article;
@@ -30,9 +29,9 @@ interface HomePageProps {
 const Homepage: React.FC<HomePageProps> = props => {
   const { articles, featuredArticle, cloudinaryURLs } = props;
 
-  const { setWidth } = useContext(WindowContext);
+  const { handleWindowResize } = useWindowResize();
 
-  useEffect(() => handleWindowResize(setWidth), []);
+  useEffect(() => handleWindowResize(), [handleWindowResize]);
 
   return (
     <>

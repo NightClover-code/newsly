@@ -31,7 +31,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   };
 
   useEffect(() => handleResize(), [handleResize]);
-  useEffect(() => handleResponsiveNum(width), [width, handleResponsiveNum]);
+  useEffect(() => handleResponsiveNum(), [handleResponsiveNum]);
 
   useEffect(() => {
     if (gridRef.current) {

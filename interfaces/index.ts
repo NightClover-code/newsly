@@ -7,7 +7,7 @@ export interface Article {
   author: string | null;
   title: string;
   description: string;
-  urlToImage: string;
+  urlToImage: string | null;
   publishedAt: string;
   content: string;
 }

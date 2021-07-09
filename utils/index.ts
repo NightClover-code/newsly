@@ -48,7 +48,8 @@ export const isResponsiveIndexValid = (
 
 export const filterArticles = (featuredArticle: Article, articles: Article[]) =>
   articles.filter(
-    (article: Article) => article !== featuredArticle && article.content
+    (article: Article) =>
+      article !== featuredArticle && article.content && article.urlToImage
   );
 
 export const handleWindowResize = (setWidth: setWidthType) => {
@@ -62,8 +63,6 @@ export const handleWindowResize = (setWidth: setWidthType) => {
 
   return () => window.removeEventListener('resize', handleResize);
 };
-
-export const handleCounterResize = (setCounter: setCounterType) => {};
 
 //exporting everything
 export * from './seo';

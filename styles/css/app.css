@@ -832,7 +832,7 @@ header .container svg {
 
 @media screen and (max-width: 1000px) {
   .hero__section .illustration__container {
-    width: 70%;
+    width: 82%;
     margin: auto;
   }
 }

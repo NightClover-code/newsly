@@ -62,7 +62,6 @@
   .articles__section .articles__grid {
     -ms-grid-columns: 1fr 5px 1fr;
         grid-template-columns: 1fr 5px 1fr;
-    gap: 50px 15px;
   }
 }
 

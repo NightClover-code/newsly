@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = ({ images }) => (
     <div className="container">
       <div className="footer__top">
         <div className="footer__logo">
-          <Link href="/">
+          <Link href="/" passHref>
             <div className="logo__container">
               <Image
                 src={
@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({ images }) => (
             </div>
           </Link>
           <p>
-            The best platform to stay up-to-date with what's going on in the
+            The best platform to stay up-to-date with {`what's`} going on in the
             world.
           </p>
         </div>

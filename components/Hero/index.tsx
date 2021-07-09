@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ featuredArticle }) => {
         <div className="button primary__button">Read Article</div>
       </div>
       <div className="illustration__container">
-        <HeroIllustration urlToImage={urlToImage} />
+        <HeroIllustration urlToImage={urlToImage!} />
       </div>
     </section>
   );

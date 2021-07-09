@@ -15,7 +15,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ images }) => (
   <header>
     <div className="container">
-      <Link href="/">
+      <Link href="/" passHref>
         <div className="logo__container">
           <Image
             src={images ? images.logo : cloudinaryNotFoundURLs.logo}

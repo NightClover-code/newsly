@@ -1377,7 +1377,7 @@ header .container svg {
 
 @media screen and (max-width: 800px) {
   .app__container {
-    background-position: 250px -280px;
+    background-position: 250px -150px;
   }
 }
 
@@ -1395,7 +1395,7 @@ header .container svg {
 
 @media screen and (max-width: 500px) {
   .app__container {
-    background-position: 130px -450px;
+    background-position: 130px -400px;
   }
 }
 

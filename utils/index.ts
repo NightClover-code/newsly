@@ -1,7 +1,5 @@
 //importing types
 import { Article } from '../interfaces';
-import { Dispatch, SetStateAction } from 'react';
-import { setCounterType, setWidthType } from '../types';
 
 //utils
 export const findFeaturedArticle = (articles: Article[]): Article => {
@@ -51,18 +49,6 @@ export const filterArticles = (featuredArticle: Article, articles: Article[]) =>
     (article: Article) =>
       article !== featuredArticle && article.content && article.urlToImage
   );
-
-export const handleWindowResize = (setWidth: setWidthType) => {
-  setWidth(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  window.addEventListener('resize', handleResize);
-
-  return () => window.removeEventListener('resize', handleResize);
-};
 
 //exporting everything
 export * from './seo';

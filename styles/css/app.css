@@ -1341,61 +1341,62 @@ header .container svg {
   overflow: hidden;
   font-size: 16px;
   font-family: 'Nunito', sans-serif;
-  background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465683/bg-light-green_pwxioz.svg") no-repeat;
-  background-position: 105% -130px;
+  background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1625859344/bg-light-green_ajaplz.svg") no-repeat;
+  background-position: 105% -90px;
 }
 
 @media screen and (max-width: 1300px) {
   .app__container {
-    background-position: 130% -150px;
+    background-position: 120% -100px;
   }
 }
 
 @media screen and (max-width: 1250px) {
   .app__container {
-    background-position: 150% -200px;
+    background-position: 125% -140px;
   }
 }
 
 @media screen and (max-width: 1100px) {
   .app__container {
-    background-position: 180% -250px;
+    background-position: 140% -180px;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .app__container {
-    background-position: 150% -180px;
+    background-position: 100% 0px;
   }
 }
 
 @media screen and (max-width: 900px) {
   .app__container {
-    background-position: 250% -180px;
+    background-position: 120% -90px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .app__container {
-    background-position: 250px -150px;
+    background-position: 250px -90px;
   }
 }
 
 @media screen and (max-width: 700px) {
   .app__container {
-    background-position: 200px -350px;
+    background-position: 200px -180px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .app__container {
-    background-position: 150px -350px;
+    background-position: 150px -230px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .app__container {
-    background-position: 130px -400px;
+    background-position: 100px 0px;
+    background-size: 92%;
   }
 }
 

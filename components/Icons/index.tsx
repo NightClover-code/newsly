@@ -360,34 +360,70 @@ export const HeroIllustration: React.FC<{ urlToImage: string }> = ({
   urlToImage,
 }) => (
   <svg
-    width="633"
+    width="733"
     height="679"
-    viewBox="0 0 633 679"
+    viewBox="0 0 733 679"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <path
-      d="M583.75 425.197C555.334 349.42 601.047 256.029 612.991 219.574C620.235 197.462 654.144 142.651 612.991 109.979C586.294 88.7855 467.075 56.337 349.434 68.7468C50.4416 100.287 -69.0072 532.925 39.3052 546.851C147.618 560.777 164.915 504.661 254.283 546.851C343.651 589.04 444.138 597.233 528.565 584.535C612.991 571.837 612.167 500.975 583.75 425.197Z"
-      fill="url(#pattern0)"
-    />
-    <path
-      d="M31.6729 164.77L79.965 150.027L89.6196 199.588L31.6729 164.77Z"
+      d="M81.6729 164.77L129.965 150.027L139.62 199.588L81.6729 164.77Z"
       fill="white"
       stroke="#008379"
       strokeWidth="3"
     />
     <path
-      d="M542.244 64.6632L542.244 5.33868L596.647 63.1942L542.244 64.6632Z"
+      d="M592.244 64.6632L592.244 5.33868L646.647 63.1942L592.244 64.6632Z"
       stroke="#FFB34D"
       strokeWidth="3"
     />
     <path
-      d="M321.393 675.579L268.497 677.008L333.677 634.493L321.393 675.579Z"
+      d="M371.393 675.579L318.497 677.008L383.677 634.493L371.393 675.579Z"
       stroke="#ED455D"
       strokeWidth="3"
     />
+    <g filter="url(#filter0_d)">
+      <path
+        d="M633.75 425.197C605.334 349.42 651.047 256.029 662.991 219.574C670.235 197.462 704.144 142.651 662.991 109.979C636.294 88.7855 517.075 56.337 399.434 68.7468C100.442 100.287 -19.0072 532.925 89.3052 546.851C197.618 560.777 214.915 504.661 304.283 546.851C393.651 589.04 494.138 597.233 578.565 584.535C662.991 571.837 662.167 500.975 633.75 425.197Z"
+        fill="url(#pattern0)"
+      />
+      <path d="M633.75 425.197C605.334 349.42 651.047 256.029 662.991 219.574C670.235 197.462 704.144 142.651 662.991 109.979C636.294 88.7855 517.075 56.337 399.434 68.7468C100.442 100.287 -19.0072 532.925 89.3052 546.851C197.618 560.777 214.915 504.661 304.283 546.851C393.651 589.04 494.138 597.233 578.565 584.535C662.991 571.837 662.167 500.975 633.75 425.197Z" />
+    </g>
     <defs>
+      <filter
+        id="filter0_d"
+        x="0"
+        y="31"
+        width="733"
+        height="624"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        />
+        <feOffset dy="15" />
+        <feGaussianBlur stdDeviation="25" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0.513726 0 0 0 0 0.47451 0 0 0 0.5 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow"
+          result="shape"
+        />
+      </filter>
       <pattern
         id="pattern0"
         patternContentUnits="objectBoundingBox"
@@ -403,3 +439,46 @@ export const HeroIllustration: React.FC<{ urlToImage: string }> = ({
     </defs>
   </svg>
 );
+// <svg
+// width="633"
+// height="679"
+//   viewBox="0 0 633 679"
+//   fill="none"
+//   xmlns="http://www.w3.org/2000/svg"
+//   xmlnsXlink="http://www.w3.org/1999/xlink"
+// >
+//   <path
+//     d="M583.75 425.197C555.334 349.42 601.047 256.029 612.991 219.574C620.235 197.462 654.144 142.651 612.991 109.979C586.294 88.7855 467.075 56.337 349.434 68.7468C50.4416 100.287 -69.0072 532.925 39.3052 546.851C147.618 560.777 164.915 504.661 254.283 546.851C343.651 589.04 444.138 597.233 528.565 584.535C612.991 571.837 612.167 500.975 583.75 425.197Z"
+//     fill="url(#pattern0)"
+//   />
+//   <path
+//     d="M31.6729 164.77L79.965 150.027L89.6196 199.588L31.6729 164.77Z"
+//     fill="white"
+//     stroke="#008379"
+//     strokeWidth="3"
+//   />
+//   <path
+//     d="M542.244 64.6632L542.244 5.33868L596.647 63.1942L542.244 64.6632Z"
+//     stroke="#FFB34D"
+//     strokeWidth="3"
+//   />
+//   <path
+//     d="M321.393 675.579L268.497 677.008L333.677 634.493L321.393 675.579Z"
+//     stroke="#ED455D"
+//     strokeWidth="3"
+//   />
+//   <defs>
+// <pattern
+//   id="pattern0"
+//   patternContentUnits="objectBoundingBox"
+//   width="1"
+//   height="1"
+// >
+//   <use
+//     xlinkHref="#image0"
+//     transform="translate(-0.3) scale(0.00118258 0.00142857)"
+//   />
+// </pattern>;
+// <image id="image0" height="750" xlinkHref={urlToImage!} />
+//   </defs>
+// </svg>

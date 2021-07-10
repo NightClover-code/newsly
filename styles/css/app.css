@@ -672,7 +672,7 @@ header .container svg {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -744,6 +744,7 @@ header .container svg {
   font-family: inherit;
   color: #00252b;
   font-weight: 700;
+  padding: 10px 0;
 }
 
 @media screen and (max-width: 1250px) {
@@ -792,6 +793,11 @@ header .container svg {
   display: inline-block;
   margin-top: 20px;
   margin-left: 5px;
+}
+
+.hero__section .illustration__container {
+  -webkit-transform: scale(115%);
+          transform: scale(115%);
 }
 
 @media screen and (max-width: 1000px) {

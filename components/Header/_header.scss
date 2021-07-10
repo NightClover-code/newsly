@@ -27,9 +27,9 @@ header {
         .list__item {
           list-style: none;
           cursor: pointer;
-          font-weight: 600;
+          font-weight: 700;
           padding: 0 20px;
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(0, 0, 0, 0.45);
           transition: all 0.2s ease-in-out;
           &:hover {
             color: #000;
@@ -40,10 +40,10 @@ header {
         display: flex;
         align-items: center;
         .list__item {
+          font-weight: 700;
           cursor: pointer;
           padding-right: 35px;
-          font-weight: 600;
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(0, 0, 0, 0.45);
           transition: all 0.2s ease-in-out;
           &:hover {
             color: #000;

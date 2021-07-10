@@ -560,7 +560,7 @@ footer .container .footer__bottom .privacy__policy:hover {
 }
 
 header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 header .container {

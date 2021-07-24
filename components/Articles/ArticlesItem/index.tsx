@@ -2,6 +2,7 @@
 import Image from 'next/image';
 //importing types
 import { Article } from '../../../interfaces';
+import { ReadMoreArrowRight } from '../../Icons';
 
 //props interface
 interface ArticlesItemProps {
@@ -31,6 +32,7 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
         <p className="description">{description}</p>
         <div className="news__type">
           <div className="custom__button">Article</div>
+          <ReadMoreArrowRight />
         </div>
         <span className="author">{author ? `by ${author}` : 'by Variety'}</span>
       </div>

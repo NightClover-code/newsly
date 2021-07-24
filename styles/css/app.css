@@ -135,7 +135,18 @@
 }
 
 .articles__item .text__content .news__type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 15px;
+}
+
+.articles__item .text__content .news__type .read__more {
+  margin-top: 10px;
+  margin-right: 15px;
 }
 
 .categories__section {

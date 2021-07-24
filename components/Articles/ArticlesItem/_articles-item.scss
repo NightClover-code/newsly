@@ -37,7 +37,13 @@
       }
     }
     .news__type {
+      display: flex;
+      justify-content: space-between;
       margin-top: 15px;
+      .read__more {
+        margin-top: 10px;
+        margin-right: 15px;
+      }
     }
   }
 }

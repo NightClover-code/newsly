@@ -1,5 +1,5 @@
 .articles__section {
-  margin-top: 80px;
+  margin-top: 60px;
   display: flex;
   flex-flow: column nowrap;
   h1 {
@@ -26,16 +26,12 @@
     }
   }
   .articles__grid {
-    margin-top: 70px;
+    margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 5px 1fr 5px 1fr;
-    gap: 50px 30px;
-    overflow: hidden;
+    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    gap: 50px 0px;
     @media screen and (max-width: 1300px) {
-      grid-template-columns: 1fr 5px 1fr;
-    }
-    @media screen and (max-width: 900px) {
-      grid-template-columns: 1fr 5px 1fr;
+      grid-template-columns: 1fr 1px 1fr;
     }
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr;

@@ -15,26 +15,30 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
 
   return (
     <div className="articles__item">
-      <div className="image__container">
-        {urlToImage && (
-          <Image
-            src={urlToImage}
-            alt={title}
-            objectFit="cover"
-            width="200"
-            height="130"
-            layout="responsive"
-          />
-        )}
-      </div>
-      <div className="text__content">
-        <h1>{title}</h1>
-        <p className="description">{description}</p>
-        <div className="news__type">
-          <div className="custom__button">Article</div>
-          <ReadMoreArrowRight />
+      <div className="container">
+        <div className="image__container">
+          {urlToImage && (
+            <Image
+              src={urlToImage}
+              alt={title}
+              objectFit="cover"
+              width="200"
+              height="130"
+              layout="responsive"
+            />
+          )}
         </div>
-        <span className="author">{author ? `by ${author}` : 'by Variety'}</span>
+        <div className="text__content">
+          <h1>{title}</h1>
+          <p className="description">{description}</p>
+          <div className="news__type">
+            <div className="custom__button">Article</div>
+            <ReadMoreArrowRight />
+          </div>
+          <span className="author">
+            {author ? `by ${author}` : 'by Variety'}
+          </span>
+        </div>
       </div>
     </div>
   );

@@ -38,9 +38,7 @@ const Articles: React.FC<ArticlesProps> = ({ articles }) => {
             );
           else
             return isLastIndex(articles, index) ? (
-              <Fragment key={uuidv4()}>
-                <ArticlesItem article={article} />
-              </Fragment>
+              <ArticlesItem article={article} />
             ) : (
               <Fragment key={uuidv4()}>
                 <ArticlesItem article={article} />

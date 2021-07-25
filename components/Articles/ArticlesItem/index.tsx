@@ -20,15 +20,23 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   const [containerHeight, setContainerHeight] = useState(
     containerRef.current?.clientHeight
   );
+  const [spans, setSpans] = useState(0);
 
   const { width } = useContext(WindowContext);
+
+  useEffect(() => {
+    setSpans(Math.ceil(containerHeight! / 10));
+  }, [containerHeight]);
 
   useEffect(() => {
     setContainerHeight(containerRef.current?.clientHeight! + 60);
   }, [width]);
 
   return (
-    <div className="articles__item" style={{ maxHeight: containerHeight }}>
+    <div
+      className="articles__item"
+      style={{ maxHeight: containerHeight, gridRowEnd: `span ${spans}` }}
+    >
       <div className="container" ref={containerRef}>
         <div className="image__container">
           {urlToImage && (

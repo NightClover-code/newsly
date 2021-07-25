@@ -28,10 +28,11 @@
   .articles__grid {
     margin-top: 40px;
     display: grid;
-    grid-template-columns: 1fr 1px 1fr 1px 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px 0px;
+    grid-template-rows: auto;
     @media screen and (max-width: 1300px) {
-      grid-template-columns: 1fr 1px 1fr;
+      grid-template-columns: 1fr 1fr;
     }
     @media screen and (max-width: 800px) {
       grid-template-columns: 1fr;

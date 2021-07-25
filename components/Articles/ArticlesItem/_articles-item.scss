@@ -1,11 +1,11 @@
 .articles__item {
-  padding-top: 30px;
   border-radius: 15px;
   transition: all 0.2s ease-in-out;
+  height: 100%;
 
   &:hover {
     cursor: pointer;
-    box-shadow: 0 2px 20px rgba(154, 255, 247, 0.35);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
     .text__content {
       h1 {
         color: $dark-green;
@@ -24,9 +24,8 @@
     }
   }
   .container {
-    width: 87%;
-    margin: auto;
-    margin-bottom: 50px;
+    width: 85%;
+    margin: 30px auto 30px auto;
     @media screen and (max-width: 800px) {
       margin-bottom: 0px;
     }
@@ -42,6 +41,7 @@
       width: 95%;
       h1 {
         margin-top: 30px;
+        font-size: 35px;
         @media screen and (max-width: 1000px) {
           font-size: 30px;
         }

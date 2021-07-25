@@ -46,15 +46,17 @@
   margin-top: 40px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1px 1fr 1px 1fr;
-      grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 50px 0px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
 @media screen and (max-width: 1300px) {
   .articles__section .articles__grid {
-    -ms-grid-columns: 1fr 1px 1fr;
-        grid-template-columns: 1fr 1px 1fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -67,16 +69,16 @@
 }
 
 .articles__item {
-  padding-top: 30px;
   border-radius: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  height: 100%;
 }
 
 .articles__item:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 2px 20px rgba(154, 255, 247, 0.35);
-          box-shadow: 0 2px 20px rgba(154, 255, 247, 0.35);
+  -webkit-box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
 }
 
 .articles__item:hover .text__content h1 {
@@ -93,9 +95,8 @@
 }
 
 .articles__item .container {
-  width: 87%;
-  margin: auto;
-  margin-bottom: 50px;
+  width: 85%;
+  margin: 30px auto 30px auto;
 }
 
 @media screen and (max-width: 800px) {
@@ -120,6 +121,7 @@
 
 .articles__item .container .text__content h1 {
   margin-top: 30px;
+  font-size: 35px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   -webkit-text-decoration-color: transparent;

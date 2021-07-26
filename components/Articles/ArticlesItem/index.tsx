@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useContext, useEffect, useRef, useState } from 'react';
 import { WindowContext } from '../../../context';
+import { useWindowSize } from '../../../hooks';
 //importing types
 import { Article } from '../../../interfaces';
 import { ReadMoreArrowRight } from '../../Icons';
@@ -16,27 +17,20 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   const { description, title, urlToImage, author } = article;
 
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const requiredHeight = containerRef.current?.clientHeight! + 60;
 
-  const [containerHeight, setContainerHeight] = useState(
-    containerRef.current?.clientHeight
-  );
+  const [width] = useWindowSize();
+  const [height, setHeight] = useState(requiredHeight);
   const [spans, setSpans] = useState(0);
 
-  const { width } = useContext(WindowContext);
-
   useEffect(() => {
-    setSpans(Math.ceil(containerHeight! / 10));
-  }, [containerHeight]);
+    setHeight(requiredHeight);
+  }, [width, requiredHeight]);
 
-  useEffect(() => {
-    setContainerHeight(containerRef.current?.clientHeight! + 60);
-  }, [width]);
+  useEffect(() => setSpans(Math.ceil(height! / 10)), [height]);
 
   return (
-    <div
-      className="articles__item"
-      style={{ maxHeight: containerHeight, gridRowEnd: `span ${spans}` }}
-    >
+    <div className="articles__item" style={{ gridRowEnd: `span ${spans}` }}>
       <div className="container" ref={containerRef}>
         <div className="image__container">
           {urlToImage && (

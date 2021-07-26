@@ -1,23 +1,14 @@
-import { WindowContext } from '../context';
-import { useContext, useMemo } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
-export const useWindowResize = () => {
-  const { setWidth } = useContext(WindowContext);
-
-  return {
-    handleWindowResize: useMemo(
-      () => () => {
-        setWidth(window.innerWidth);
-
-        const handleResize = () => {
-          setWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
-      },
-      [setWidth]
-    ),
-  };
-};
+export function useWindowSize() {
+  const [size, setSize] = useState([0, 0]);
+  useLayoutEffect(() => {
+    function updateSize() {
+      setSize([window.innerWidth, window.innerHeight]);
+    }
+    window.addEventListener('resize', updateSize);
+    updateSize();
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+  return size;
+}

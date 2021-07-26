@@ -62,7 +62,6 @@
   .articles__section .articles__grid {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    gap: 50px 30px;
   }
 }
 
@@ -75,8 +74,8 @@
 
 .articles__item:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
-          box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
 }
 
 .articles__item:hover .text__content h1 {
@@ -134,7 +133,7 @@
 
 @media screen and (max-width: 800px) {
   .articles__item .container .text__content h1 {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 

@@ -1,8 +1,7 @@
 //importing utils
 import Image from 'next/image';
-import { useContext, useEffect, useRef, useState } from 'react';
-import { WindowContext } from '../../../context';
-import { useWindowSize } from '../../../hooks';
+import { useEffect, useRef, useState } from 'react';
+import { useWindowWidth } from '../../../hooks';
 //importing types
 import { Article } from '../../../interfaces';
 import { ReadMoreArrowRight } from '../../Icons';
@@ -19,7 +18,7 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const requiredHeight = containerRef.current?.clientHeight! + 60;
 
-  const [width] = useWindowSize();
+  const width = useWindowWidth();
   const [height, setHeight] = useState(requiredHeight);
   const [spans, setSpans] = useState(0);
 

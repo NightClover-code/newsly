@@ -16,8 +16,6 @@ import {
   findFeaturedArticle,
   filterArticles,
 } from '../utils';
-import { useWindowSize } from '../hooks';
-import { useEffect } from 'react';
 //props interface
 interface HomePageProps {
   featuredArticle: Article;
@@ -28,8 +26,6 @@ interface HomePageProps {
 //homepage
 const Homepage: React.FC<HomePageProps> = props => {
   const { articles, featuredArticle, cloudinaryURLs } = props;
-
-  // useEffect(() => handleWindowResize(), [handleWindowResize]);
 
   return (
     <>

@@ -4,7 +4,6 @@ import MainLayout from '../layouts/MainLayout';
 //importing gql utils & providers
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { AppProps } from 'next/app';
-import { WindowProvider } from '../context';
 
 //apollo client init
 export const client = new ApolloClient({
@@ -17,11 +16,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { cloudinaryURLs } = pageProps;
   return (
     <ApolloProvider client={client}>
-      <WindowProvider>
-        <MainLayout images={cloudinaryURLs}>
-          <Component {...pageProps} />
-        </MainLayout>
-      </WindowProvider>
+      <MainLayout images={cloudinaryURLs}>
+        <Component {...pageProps} />
+      </MainLayout>
     </ApolloProvider>
   );
 }

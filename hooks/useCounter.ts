@@ -1,22 +1,13 @@
-import { useMemo, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
+import { useWindowWidth } from './useWindowResize';
 
 export const useCounter = () => {
   const [counter, setCounter] = useState(0);
+  const width = useWindowWidth();
 
-  return {
-    handleResize: useMemo(
-      () => () => {
-        const callback = () => {
-          setCounter(0);
-        };
+  useLayoutEffect(() => {
+    setCounter(0);
+  }, [width]);
 
-        window.addEventListener('resize', callback);
-
-        return () => window.removeEventListener('resize', callback);
-      },
-      [setCounter]
-    ),
-    counter,
-    setCounter,
-  };
+  return { counter, setCounter };
 };

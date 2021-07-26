@@ -1,6 +1,5 @@
 //importing hooks & context
-import { useContext } from 'react';
-import { WindowContext } from '../../context';
+import { useWindowWidth } from '../../hooks';
 //importing utils & components
 import Link from 'next/link';
 import Image from 'next/image';
@@ -16,7 +15,7 @@ interface HeaderProps {
 
 //header
 const Header: React.FC<HeaderProps> = ({ images }) => {
-  const { width } = useContext(WindowContext);
+  const width = useWindowWidth();
 
   return (
     <header>

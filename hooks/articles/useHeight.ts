@@ -1,5 +1,5 @@
 import { MutableRefObject, useState, useEffect } from 'react';
-import { useWindowWidth } from './useWindowWidth';
+import { useWindowWidth } from '../useWindowWidth';
 
 export const useHeight = (
   containerRef: MutableRefObject<HTMLDivElement | null>

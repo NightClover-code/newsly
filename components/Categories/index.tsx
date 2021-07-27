@@ -1,5 +1,5 @@
 //importing hooks & types
-import { useEffect, useRef, useContext } from 'react';
+import { useEffect, useRef } from 'react';
 import { CloudinaryURLs } from '../../interfaces';
 import { useCounter, useResponsiveNum } from '../../hooks';
 //importing components
@@ -17,7 +17,7 @@ const Categories: React.FC<CategoriesProps> = ({ images: { iconSearch } }) => {
   const gridRef = useRef<HTMLDivElement | null>(null);
 
   const responsiveNum = useResponsiveNum();
-  const { counter, setCounter } = useCounter();
+  const [counter, setCounter] = useCounter();
 
   const onArrowRightClickHandler = () => {
     if (counter < responsiveNum) setCounter(counter + 1);

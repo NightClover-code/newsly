@@ -22,9 +22,7 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   const [height, setHeight] = useState(requiredHeight);
   const [spans, setSpans] = useState(0);
 
-  useEffect(() => {
-    setHeight(requiredHeight);
-  }, [width, requiredHeight]);
+  useEffect(() => setHeight(requiredHeight), [width, requiredHeight]);
 
   useEffect(() => setSpans(Math.ceil(height! / 10)), [height]);
 

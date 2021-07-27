@@ -1,7 +1,7 @@
 //importing utils
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { useWindowWidth } from '../../../hooks';
+import { useRef } from 'react';
+import { useSpans } from '../../../hooks';
 //importing types
 import { Article } from '../../../interfaces';
 import { ReadMoreArrowRight } from '../../Icons';
@@ -16,15 +16,8 @@ const ArticlesItem: React.FC<ArticlesItemProps> = ({ article }) => {
   const { description, title, urlToImage, author } = article;
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const requiredHeight = containerRef.current?.clientHeight! + 60;
 
-  const width = useWindowWidth();
-  const [height, setHeight] = useState(requiredHeight);
-  const [spans, setSpans] = useState(0);
-
-  useEffect(() => setHeight(requiredHeight), [width, requiredHeight]);
-
-  useEffect(() => setSpans(Math.ceil(height! / 10)), [height]);
+  const spans = useSpans(containerRef);
 
   return (
     <div className="articles__item" style={{ gridRowEnd: `span ${spans}` }}>

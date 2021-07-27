@@ -2,7 +2,7 @@ import { useLayoutEffect, useState } from 'react';
 import { useWindowWidth } from './useWindowWidth';
 
 export const useResponsiveNum = () => {
-  const [responsiveNum, setResponsiveNum] = useState(2);
+  const [responsiveNum, setResponsiveNum] = useState<number>(2);
   const width = useWindowWidth();
 
   useLayoutEffect(() => {

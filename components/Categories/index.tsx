@@ -1,10 +1,10 @@
 //importing hooks & types
 import { useEffect, useRef } from 'react';
-import { CloudinaryURLs } from '../../interfaces';
 import { useCounter, useResponsiveNum } from '../../hooks';
+import { CloudinaryURLs } from '../../interfaces';
 //importing components
-import CategoriesGrid from '../CategoriesGrid';
 import { ArrowIconLeft, ArrowIconRight } from '../Icons';
+import CategoriesGrid from '../CategoriesGrid';
 import Image from 'next/image';
 
 //props interface

@@ -1,5 +1,6 @@
 //importing types
 import { Article } from '../../interfaces';
+//importing components
 import { HeroIllustration } from '../Icons';
 
 //props interface

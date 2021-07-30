@@ -1,10 +1,11 @@
-//importing utils
-import Image from 'next/image';
+//importing hooks
 import { useRef } from 'react';
 import { useSpans } from '../../../hooks';
 //importing types
 import { Article } from '../../../interfaces';
+//importing components
 import { ReadMoreArrowRight } from '../../Icons';
+import Image from 'next/image';
 
 //props interface
 interface ArticlesItemProps {

@@ -1,4 +1,4 @@
-//importing hooks & context
+//importing hooks
 import { useWindowWidth } from '../../hooks';
 //importing utils & components
 import Link from 'next/link';

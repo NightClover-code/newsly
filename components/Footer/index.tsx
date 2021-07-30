@@ -1,10 +1,10 @@
-//importing utils
+//importing components
 import Link from 'next/link';
 import Image from 'next/image';
-import { cloudinaryNotFoundURLs } from '../../utils';
-//importing types
-import { CloudinaryURLs } from '../../interfaces';
 import { FacebookIcon, LinkedInIcon, TwitterIcon } from '../Icons';
+//importing types & utils
+import { CloudinaryURLs } from '../../interfaces';
+import { cloudinaryNotFoundURLs } from '../../utils';
 
 //props interface
 interface FooterProps {

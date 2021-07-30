@@ -1,6 +1,3 @@
-//importing types
-import { setWidthType } from '../types';
-
 //interfaces
 export interface Article {
   __typename: string;
@@ -20,9 +17,4 @@ export interface CloudinaryURLs {
   iconSearch: string;
   logoFooter: string;
   favicon: string;
-}
-
-export interface WidthState {
-  width: number | null;
-  setWidth: setWidthType;
 }

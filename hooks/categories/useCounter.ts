@@ -8,7 +8,5 @@ export const useCounter = () => {
 
   useEffect(() => setCounter(0), [width]);
 
-  const result: counterResultType = [counter, setCounter];
-
-  return result;
+  return [counter, setCounter] as counterResultType;
 };

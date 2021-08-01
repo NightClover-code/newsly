@@ -7,7 +7,7 @@ export const useSpans = (
   const [spans, setSpans] = useState<number>(0);
   const height = useHeight(containerRef);
 
-  useEffect(() => setSpans(Math.ceil(height / 10 + 1)), [height]);
+  useEffect(() => setSpans(Math.ceil(height / 10)), [height]);
 
   return spans;
 };

@@ -1,7 +1,7 @@
 //importing types & random id's
 import { Article } from '../../interfaces';
 import { v4 as uuidv4 } from 'uuid';
-//importing hooks
+//importing components
 import ArticlesItem from './ArticlesItem';
 
 //props interface

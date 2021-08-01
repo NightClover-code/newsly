@@ -16,14 +16,14 @@ export const findFeaturedArticle = (articles: Article[]): Article => {
   })!;
 };
 
-export const isIndexValid = (
+export const isMiddleArticle = (
   articles: Article[],
   index: number
-): number | null => {
+): boolean => {
   for (let i = 0; i < articles.length; i++) {
-    if (index === 2 + 3 * i) return index;
+    if (index === 1 + 3 * i) return true;
   }
-  return null;
+  return false;
 };
 
 export const filterArticles = (featuredArticle: Article, articles: Article[]) =>

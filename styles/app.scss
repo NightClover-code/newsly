@@ -54,8 +54,11 @@
   .wrapper {
     min-width: 250px;
     max-width: 2000px;
-    width: 80%;
+    width: 70%;
     margin: auto;
+    @media screen and (max-width: 1500px) {
+      width: 80%;
+    }
   }
 }
 

@@ -7,8 +7,11 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     margin: auto;
-    width: 80%;
+    width: 70%;
     overflow: hidden;
+    @media screen and (max-width: 1500px) {
+      width: 80%;
+    }
     .footer__top {
       display: flex;
       justify-content: space-between;

@@ -402,8 +402,14 @@ footer .container {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
   margin: auto;
-  width: 80%;
+  width: 70%;
   overflow: hidden;
+}
+
+@media screen and (max-width: 1500px) {
+  footer .container {
+    width: 80%;
+  }
 }
 
 footer .container .footer__top {
@@ -612,8 +618,14 @@ header .container {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
-  width: 80%;
+  width: 70%;
   margin: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  header .container {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1050px) {
@@ -886,14 +898,13 @@ header .container svg {
 .newsletter__section {
   background: url("https://res.cloudinary.com/achraf-dev/image/upload/v1621465955/bg-newsletter_rxlzxr.jpg") no-repeat;
   background-size: cover;
-  background-position: 50% 0%;
+  background-position: 50% 15%;
   margin-top: 180px;
 }
 
 @media screen and (max-width: 700px) {
   .newsletter__section {
     background-size: cover;
-    background-position: 50% 0;
   }
 }
 
@@ -1257,6 +1268,15 @@ header .container svg {
   top: 0;
   right: 0;
   height: 100%;
+  padding: 30px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter__section form .email__container .button {
+    padding: 20px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 380px) {
@@ -1452,8 +1472,14 @@ header .container svg {
 .app__container .wrapper {
   min-width: 250px;
   max-width: 2000px;
-  width: 80%;
+  width: 70%;
   margin: auto;
+}
+
+@media screen and (max-width: 1500px) {
+  .app__container .wrapper {
+    width: 80%;
+  }
 }
 
 .hide__arrow {

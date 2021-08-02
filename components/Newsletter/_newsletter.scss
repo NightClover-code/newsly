@@ -2,11 +2,10 @@
   background: url('https://res.cloudinary.com/achraf-dev/image/upload/v1621465955/bg-newsletter_rxlzxr.jpg')
     no-repeat;
   background-size: cover;
-  background-position: 50% 0%;
+  background-position: 50% 15%;
   margin-top: 180px;
   @media screen and (max-width: 700px) {
     background-size: cover;
-    background-position: 50% 0;
   }
   @media screen and (max-width: 1000px) {
     margin-top: 100px;
@@ -206,9 +205,16 @@
         align-items: center;
         box-shadow: 0 15px 35px rgba(0, 131, 121, 0.35);
         position: absolute;
+
         top: 0;
         right: 0;
         height: 100%;
+        padding: 30px;
+        font-size: 18px;
+        @media screen and (max-width: 600px) {
+          padding: 20px;
+          font-size: 16px;
+        }
         @media screen and (max-width: 380px) {
           padding: 0 20px;
           font-size: 15px;

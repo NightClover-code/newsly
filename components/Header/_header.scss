@@ -5,8 +5,11 @@ header {
     display: flex;
     align-items: center;
     overflow: hidden;
-    width: 80%;
+    width: 70%;
     margin: auto;
+    @media screen and (max-width: 1500px) {
+      width: 80%;
+    }
     @media screen and (max-width: 1050px) {
       justify-content: space-between;
     }
